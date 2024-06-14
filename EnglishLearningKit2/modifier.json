@@ -1,2049 +1,2020 @@
 {
-  "modifiers": [
-    {
-      "description": "Ẩn nội dung của một view, thay thế bằng một placeholder như nền mờ hoặc lớp phủ màu",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".redacted",
-      "parent": "View"
-    },
-    {
-      "description": "Tiết lộ nội dung của một view đã bị redact trước đây",
-      "fullText": "public func unredacted() -> some View",
-      "ios": "14.0",
-      "keyword": ".unredacted()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".actionSheet",
-      "parent": "View"
-    },
-    {
-      "description": "Điều chỉnh khoảng cách (khoảng cách) xung quanh nội dung của một hàng trong danh sách như UITableView hoặc List",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".listRowInsets()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".alert()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát cách thức một view hoạt động khi nó trở thành mục tiêu cuộn của một container có thể cuộn.",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".scrollTargetBehavior()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát cách thức một view được bố trí trong một container có thể cuộn khi nó trở thành mục tiêu cuộn",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".scrollTargetLayout()",
-      "parent": "View"
-    },
-    {
-      "description": "Lấy khung của một view tương đối với ranh giới container của nó",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".containerRelativeFrame()",
-      "parent": "View"
-    },
-    {
-      "description": "Xác định view đích để di chuyển đến khi NavigationLink được nhấn.",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".navigationDestination()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".multilineTextAlignment()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát cách thức văn bản bị cắt bớt (cắt đứt) khi nó tràn ra khỏi ranh giới của view\n.lineBreak: Chia nhỏ văn bản thành nhiều dòng nếu cần thiết.\n.head: Cắt bớt phần đầu của văn bản với dấu chấm lửng ở cuối.\n.middle: Cắt bớt phần giữa của văn bản với dấu chấm lửng ở cả hai đầu.\n.tail: Cắt bớt phần cuối của văn bản với dấu chấm lửng ở đầu.\n.clip: Đơn giản là cắt bớt văn bản mà không có dấu chấm lửng",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".truncationMode()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".lineSpacing()",
-      "parent": "View"
-    },
-    {
-      "description": "Cho phép thắt chặt cho nhiều ký tự hơn(make text scale to fit)",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".allowsTightening()",
-      "parent": "View"
-    },
-    {
-      "description": ".minimumScaleFactor(0.5) Cho phép thu nhỏ logo đến 50% kích thước gốc",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".minimumScaleFactor()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát cách chữ hoa chữ thường được xử lý trong một Text view",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".textCase()",
-      "parent": "View"
-    },
-    {
-      "description": "Tạo hiệu ứng hoạt hình phức tạp cho các animation tùy chỉnh trong SwiftUI",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".keyframeAnimator()",
-      "parent": "View"
-    },
-    {
-      "description": "Phản hồi xúc giác nhẹ khi người dùng chạm vào view",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".sensoryFeedback()",
-      "parent": "View"
-    },
-    {
-      "description": "Xử lý thao tác thả (drop) dữ liệu từ một view khác vào view hiện tại",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".onDrop()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát xem một view có thể là đích đến hợp lệ cho thao tác thả dữ liệu hay không",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".dropDestination()",
-      "parent": "View"
-    },
-    {
-      "description": "Đánh dấu nội dung của một view là có thể thay đổi bất thường, ảnh hưởng đến việc SwiftUI quyết định thời điểm cần cập nhật giao diện",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".invalidatableContent()",
-      "parent": "View"
-    },
-    {
-      "description": "Xác định thứ tự xếp chồng của các view. View có giá trị zIndex cao hơn sẽ được hiển thị phía trước các view khác",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".zIndex()",
-      "parent": "View"
-    },
-    {
-      "description": "Tìm kiếm đối tượng điều hướng (navigation) được liên kết với một view trong NavigationView",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".findNavigator()",
-      "parent": "View"
-    },
-    {
-      "description": "Tìm kiếm control (phần tử điều khiển) bị vô hiệu hóa trong một hierarchy (cây thư mục) view",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".findDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "Thay thế hành vi mặc định của Toggle khi bị vô hiệu hóa",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".replaceDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".allowedDynamicRange()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".speechAlwaysIncludesPunctuation()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát việc đọc các dấu câu trong Text view bằng tính năng đọc thành tiếng (text-to-speech)",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".speechSpellsOutCharacters()",
-      "parent": "View"
-    },
-    {
-      "description": "Điều chỉnh cao độ giọng nói được sử dụng cho Text view bằng tính năng đọc thành tiếng",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".speechAdjustedPitch()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát cách các thông báo bằng giọng nói (speech announcements) được xếp hàng đợi trong Text view",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".speechAnnouncementsQueued()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát hình nền (background) của một view. Có thể sử dụng hình ảnh, màu sắc, hoặc gradient",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".backgroundStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "sử dụng để xác định cách mà view con sẽ được căn chỉnh trong view cha",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".alignmentGuide()",
-      "parent": "View"
-    },
-    {
-      "description": "Xác định các phạm vi tìm kiếm (search scopes) khả dụng cho một view hỗ trợ tìm kiếm (Searchable)",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".searchScopes()",
-      "parent": "View"
-    },
-    {
-      "description": "Loại bỏ các hiệu ứng (effect) mặc định khỏi một SFSymbol view.",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".symbolEffectsRemoved()",
-      "parent": "View"
-    },
-    {
-      "description": "Bật/tắt khả năng chọn các mục trong một List view",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".selectionDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "Liên kết một user activity với một view. User activity đại diện cho một tác vụ người dùng có thể tiếp tục trên các thiết bị khác nhau của người dùng",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".userActivity()",
-      "parent": "View"
-    },
-    {
-      "description": "Phản hồi với hoạt động của người dùng tiếp tục (continued user activity) trong một view cụ thể. Hoạt động của người dùng cho phép họ tiếp tục các tác vụ dang dở trên các thiết bị khác nhau",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".onContinueUserActivity()",
-      "parent": "View"
-    },
-    {
-      "description": "Phản hồi với một liên kết universal link (URL) mở ứng dụng của bạn. Universal link cho phép người dùng mở ứng dụng của bạn trực tiếp từ một liên kết.",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".onOpenURL()",
-      "parent": "View"
-    },
-    {
-      "description": "Chỉ định các loại sự kiện bên ngoài mà một view có thể xử lý. Sự kiện bên ngoài bao gồm các thứ như liên kết universal link, handoff và hoạt động của người dùng (user activities).",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".handlesExternalEvents()",
-      "parent": "View"
-    },
-    {
-      "description": "Thay đổi các giá trị môi trường cho một hierarchy view (cấu trúc các view lồng nhau). Giá trị môi trường là các cài đặt trên toàn hệ thống có thể được truy cập bởi các view con.",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".transformEnvironment()",
-      "parent": "View"
-    },
-    {
-      "description": "Áp dụng bộ lọc hiệu ứng màu cho một view.",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".colorEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "Áp dụng hiệu ứng biến dạng cho một view.",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".distortionEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".layerEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".transformPreference()",
-      "parent": "View"
-    },
-    {
-      "description": "Phản hồi với những thay đổi giá trị từ một @ObservedObject hoặc một publisher (phát hành dữ liệu)",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".onReceive()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát kiểu dáng của menu được liên kết với một view.",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".menuStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".fixedSize()",
-      "parent": "View"
-    },
-    {
-      "description": "Truy cập hoặc thay đổi lược đồ màu (color scheme) của view và các view con. Lược đồ màu xác định màu sắc giao diện (giống như chế độ sáng/tối).",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".colorScheme()",
-      "parent": "View"
-    },
-    {
-      "description": "Áp dụng cho một view để điều khiển hành vi lật nội dung.",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".flipsForRightToLeftLayoutDirection()",
-      "parent": "View"
-    },
-    {
-      "description": "Áp dụng cho một Text Editor view để thiết lập kiểu (ví dụ: .plain, .bordered)",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".textEditorStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "Áp dụng cho một Toggle view để thiết lập kiểu (ví dụ: .switch, .slider).",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".toggleStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "Ẩn thanh trạng thái",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".statusBarHidden()",
-      "parent": "View"
-    },
-    {
-      "description": "Xác định bàn phím ảo xuất hiện khi người dùng tương tác với một Text Editor view.",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".keyboardType()",
-      "parent": "View"
-    },
-    {
-      "description": "Bật/tắt tự động viết hoa cho Text Editor view.",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".autocapitalization()",
-      "parent": "View"
-    },
-    {
-      "description": "Thuộc tính textInputAutocapitalization đã bị gỡ bỏ từ iOS 14 trở lên. Sử dụng autocapitalization thay thế",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".textInputAutocapitalization()",
-      "parent": "View"
-    },
-    {
-      "description": "Truy cập giá trị focus hiện tại của một view. Focus cho biết view nào đang nhận đầu vào từ người dùng (ví dụ: bàn phím)",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".focusedValue()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".foregroundColor()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát độ nổi bật của header trong một List view",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".headerProminence()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".tint()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".modifier()",
-      "parent": "View"
-    },
-    {
-      "description": "Xác định kiểu dáng của chỉ mục (index) được hiển thị trong một List view.",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".indexViewStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "Áp dụng cho một view để điều khiển thứ tự menu.",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".menuOrder()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát kiểu dáng của TabBar view.",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".tabViewStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "Kiểm soát hiệu ứng chuyển đổi giữa các view trong một animation",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".phaseAnimator()",
-      "parent": "View"
-    },
-    {
-      "description": "Thiết lập khoảng lề (margin) cho nội dung của một view.",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".contentMargins()",
-      "parent": "View"
-    },
-    {
-      "description": "Thiết lập kiểu hiển thị mặc định cho các nhóm tiết lộ (disclosure group).",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".disclosureGroupStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "Xác định hình dạng của một view để tính toán các tương tác cảm ứng.",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".contentShape()",
-      "parent": "View"
-    },
-    {
-      "description": "Thiết lập thứ tự sắp xếp các view con trong menu.",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".menuOrder()",
-      "parent": "View"
-    },
-    {
-      "description": "Thiết lập trạng thái focus mặc định cho một view.",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".defaultFocus()",
-      "parent": "View"
-    },
-    {
-      "description": "Xác định hành vi khi người dùng di chuột hoặc trackpad liên tục trên một view.",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".onContinuousHover()",
-      "parent": "View"
-    },
-    {
-      "description": "Lặp lại hành vi của `.onContinuousHover()` nhưng dành cho các thiết bị hỗ trợ bàn phím ảo (như iPad).",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".onContinuousHover()",
-      "parent": "View"
-    },
-    {
-      "description": "Áp dụng hiệu ứng symbol cho một view.",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".symbolEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".scrollPosition()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".task()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".springLoadingBehavior()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".searchable()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".transition()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".safeAreaInset()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".safeAreaPadding()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".navigationSplitViewStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".allowsHitTesting()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".environment()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".contentShape()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".scrollTransition()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".navigationBarItems()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".typeSelectEquivalent()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.4",
-      "keyword": ".onHover()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".listRowSeparator()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".listRowSeparatorTint()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".listSectionSeparator()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".onPreferenceChange()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".symbolVariant()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".fileDialogDefaultDirectory()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".fileDialogCustomizationID()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".fileDialogMessage()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".fileDialogConfirmationLabel()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".fileDialogURLEnabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".fileExporterFilenameLabel()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".fileDialogImportsUnresolvedAliases()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".fileDialogBrowserOptions()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".gesture()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".highPriorityGesture()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".simultaneousGesture()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".dialogSuppressionToggle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".dialogSuppressionToggle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".fileImporter()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".mask()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".background()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".overlay()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".border()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".sheet()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".fullScreenCover()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".aspectRatio()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".scaledToFit()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".scaledToFill()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".defaultAppStorage()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".onSubmit()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".submitScope()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".navigationBarHidden()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".navigationBarTitle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".padding()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".scenePadding()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".buttonStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".focused()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".offset()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".position()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".submitLabel()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".refreshable()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".geometryGroup()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".projectionEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".transformEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.4",
-      "keyword": ".hoverEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".hoverEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".defaultHoverEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".rotationEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".scaleEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".hoverEffectDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".blur()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".brightness()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".onAppear()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".onDisappear()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".colorInvert()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".colorMultiply()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".contrast()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".grayscale()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".hueRotation()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".navigationViewStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".containerShape()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".persistentSystemOverlays()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".contextMenu()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".luminanceToAlpha()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".saturation()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".opacity()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".toolbarBackground()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".toolbarColorScheme()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".toolbar()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".animation()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".blendMode()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".paletteSelectionEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".buttonStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".textFieldStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".drawingGroup()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".shadow()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".searchSuggestions()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".tabItem()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".anchorPreference()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".moveDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".scrollContentBackground()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".rotation3DEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".layoutPriority()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".inspector()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".inspectorColumnWidth()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".imageScale()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".font()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".monospacedDigit()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".monospaced()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".fontWeight()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".fontWidth()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".bold()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".italic()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.1",
-      "keyword": ".fontDesign()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".kerning()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".tracking()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".baselineOffset()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".progressViewStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".previewDevice()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".previewLayout()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".previewDisplayName()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".previewContext()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".previewInterfaceOrientation()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".popover()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".environment()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".lineLimit()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".scrollIndicators()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".scrollIndicatorsFlash()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".scrollDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".defaultScrollAnchor()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.4",
-      "keyword": ".scrollBounceBehavior()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".listItemTint()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".labelsHidden()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".containerBackground()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".tag()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".pickerStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".listSectionSpacing()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".id()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.4",
-      "keyword": ".menuActionDismissBehavior()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".accentColor()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".clipShape()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".clipped()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".cornerRadius()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".matchedGeometryEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".searchCompletion()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".searchSuggestions()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".layoutValue()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".buttonBorderShape()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".coordinateSpace()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".environmentObject()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".formStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".equatable()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".foregroundStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".swipeActions()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".deleteDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".dynamicTypeSize()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".underline()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".strikethrough()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".navigationDocument()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".listRowSpacing()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".toolbar()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".onLongPressGesture()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".confirmationDialog()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".ignoresSafeArea()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".gridCellColumns()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".gridCellAnchor()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".gridColumnAlignment()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".gridCellUnsizedAxes()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".visualEffect()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".hoverEffectDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".onTapGesture()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".preferredColorScheme()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".navigationTitle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".navigationBarTitleDisplayMode()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".defersSystemGestures()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".transformAnchorPreference()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".textContentType()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".onChange()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".onKeyPress()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".hidden()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".menuIndicator()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".focusedValue()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".focusedSceneValue()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".tableStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".controlSize()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".gaugeStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".tableColumnHeaders()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".toolbarTitleDisplayMode()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".badge()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".controlGroupStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".keyboardShortcut()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".autocorrectionDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".disableAutocorrection()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".searchDictationBehavior()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".frame()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".privacySensitive()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".presentationDetents()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".presentationDragIndicator()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.4",
-      "keyword": ".presentationBackgroundInteraction()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.4",
-      "keyword": ".presentationCompactAdaptation()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.4",
-      "keyword": ".presentationCornerRadius()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.4",
-      "keyword": ".presentationContentInteraction()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".buttonRepeatBehavior()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".textScale()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".contextMenu()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".fileMover()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".textSelection()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".focusable()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".toolbarRole()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".fileExporter()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".symbolRenderingMode()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".interactiveDismissDisabled()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".labeledContentStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".interactionActivityTrackingTag()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.4",
-      "keyword": ".presentationBackground()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".renameAction()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "17.0",
-      "keyword": ".badgeProminence()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".transaction()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".focusedObject()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".help()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "154.0",
-      "keyword": ".listRowBackground()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "14.0",
-      "keyword": ".labelStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".onDrag()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "16.0",
-      "keyword": ".draggable()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "15.0",
-      "keyword": ".datePickerStyle()",
-      "parent": "View"
-    },
-    {
-      "description": "",
-      "fullText": "",
-      "ios": "13.0",
-      "keyword": ".disabled()",
-      "parent": "View"
-    }
-  ]
+    "modifiers": [
+        {
+            "description": "Ẩn nội dung của một view, thay thế bằng một placeholder như nền mờ hoặc lớp phủ màu",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".redacted",
+            "parent": "View"
+        },
+        {
+            "description": "Tiết lộ nội dung của một view đã bị redact trước đây",
+            "fullText": "public func unredacted() -> some View",
+            "ios": "14.0",
+            "keyword": ".unredacted()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".actionSheet",
+            "parent": "View"
+        },
+        {
+            "description": "Điều chỉnh khoảng cách (khoảng cách) xung quanh nội dung của một hàng trong danh sách như UITableView hoặc List",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".listRowInsets()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".alert()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát cách thức một view hoạt động khi nó trở thành mục tiêu cuộn của một container có thể cuộn.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".scrollTargetBehavior()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát cách thức một view được bố trí trong một container có thể cuộn khi nó trở thành mục tiêu cuộn",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".scrollTargetLayout()",
+            "parent": "View"
+        },
+        {
+            "description": "Lấy khung của một view tương đối với ranh giới container của nó",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".containerRelativeFrame()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định view đích để di chuyển đến khi NavigationLink được nhấn.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".navigationDestination()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".multilineTextAlignment()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát cách thức văn bản bị cắt bớt (cắt đứt) khi nó tràn ra khỏi ranh giới của view\n.lineBreak: Chia nhỏ văn bản thành nhiều dòng nếu cần thiết.\n.head: Cắt bớt phần đầu của văn bản với dấu chấm lửng ở cuối.\n.middle: Cắt bớt phần giữa của văn bản với dấu chấm lửng ở cả hai đầu.\n.tail: Cắt bớt phần cuối của văn bản với dấu chấm lửng ở đầu.\n.clip: Đơn giản là cắt bớt văn bản mà không có dấu chấm lửng",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".truncationMode()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".lineSpacing()",
+            "parent": "View"
+        },
+        {
+            "description": "Cho phép thắt chặt cho nhiều ký tự hơn(make text scale to fit)",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".allowsTightening()",
+            "parent": "View"
+        },
+        {
+            "description": ".minimumScaleFactor(0.5) Cho phép thu nhỏ logo đến 50% kích thước gốc",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".minimumScaleFactor()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát cách chữ hoa chữ thường được xử lý trong một Text view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".textCase()",
+            "parent": "View"
+        },
+        {
+            "description": "Tạo hiệu ứng hoạt hình phức tạp cho các animation tùy chỉnh trong SwiftUI",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".keyframeAnimator()",
+            "parent": "View"
+        },
+        {
+            "description": "Phản hồi xúc giác nhẹ khi người dùng chạm vào view",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".sensoryFeedback()",
+            "parent": "View"
+        },
+        {
+            "description": "Xử lý thao tác thả (drop) dữ liệu từ một view khác vào view hiện tại",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".onDrop()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát xem một view có thể là đích đến hợp lệ cho thao tác thả dữ liệu hay không",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".dropDestination()",
+            "parent": "View"
+        },
+        {
+            "description": "Đánh dấu nội dung của một view là có thể thay đổi bất thường, ảnh hưởng đến việc SwiftUI quyết định thời điểm cần cập nhật giao diện",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".invalidatableContent()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định thứ tự xếp chồng của các view. View có giá trị zIndex cao hơn sẽ được hiển thị phía trước các view khác",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".zIndex()",
+            "parent": "View"
+        },
+        {
+            "description": "Tìm kiếm đối tượng điều hướng (navigation) được liên kết với một view trong NavigationView",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".findNavigator()",
+            "parent": "View"
+        },
+        {
+            "description": "Tìm kiếm control (phần tử điều khiển) bị vô hiệu hóa trong một hierarchy (cây thư mục) view",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".findDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "Thay thế hành vi mặc định của Toggle khi bị vô hiệu hóa",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".replaceDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".allowedDynamicRange()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".speechAlwaysIncludesPunctuation()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát việc đọc các dấu câu trong Text view bằng tính năng đọc thành tiếng (text-to-speech)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".speechSpellsOutCharacters()",
+            "parent": "View"
+        },
+        {
+            "description": "Điều chỉnh cao độ giọng nói được sử dụng cho Text view bằng tính năng đọc thành tiếng",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".speechAdjustedPitch()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát cách các thông báo bằng giọng nói (speech announcements) được xếp hàng đợi trong Text view",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".speechAnnouncementsQueued()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát hình nền (background) của một view. Có thể sử dụng hình ảnh, màu sắc, hoặc gradient",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".backgroundStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "sử dụng để xác định cách mà view con sẽ được căn chỉnh trong view cha",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".alignmentGuide()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định các phạm vi tìm kiếm (search scopes) khả dụng cho một view hỗ trợ tìm kiếm (Searchable)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".searchScopes()",
+            "parent": "View"
+        },
+        {
+            "description": "Loại bỏ các hiệu ứng (effect) mặc định khỏi một SFSymbol view.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".symbolEffectsRemoved()",
+            "parent": "View"
+        },
+        {
+            "description": "Bật/tắt khả năng chọn các mục trong một List view",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".selectionDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "Liên kết một user activity với một view. User activity đại diện cho một tác vụ người dùng có thể tiếp tục trên các thiết bị khác nhau của người dùng",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".userActivity()",
+            "parent": "View"
+        },
+        {
+            "description": "Phản hồi với hoạt động của người dùng tiếp tục (continued user activity) trong một view cụ thể. Hoạt động của người dùng cho phép họ tiếp tục các tác vụ dang dở trên các thiết bị khác nhau",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".onContinueUserActivity()",
+            "parent": "View"
+        },
+        {
+            "description": "Phản hồi với một liên kết universal link (URL) mở ứng dụng của bạn. Universal link cho phép người dùng mở ứng dụng của bạn trực tiếp từ một liên kết.",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".onOpenURL()",
+            "parent": "View"
+        },
+        {
+            "description": "Chỉ định các loại sự kiện bên ngoài mà một view có thể xử lý. Sự kiện bên ngoài bao gồm các thứ như liên kết universal link, handoff và hoạt động của người dùng (user activities).",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".handlesExternalEvents()",
+            "parent": "View"
+        },
+        {
+            "description": "Thay đổi các giá trị môi trường cho một hierarchy view (cấu trúc các view lồng nhau). Giá trị môi trường là các cài đặt trên toàn hệ thống có thể được truy cập bởi các view con.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".transformEnvironment()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng bộ lọc hiệu ứng màu cho một view.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".colorEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng hiệu ứng biến dạng cho một view.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".distortionEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".layerEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".transformPreference()",
+            "parent": "View"
+        },
+        {
+            "description": "Phản hồi với những thay đổi giá trị từ một @ObservedObject hoặc một publisher (phát hành dữ liệu)",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".onReceive()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát kiểu dáng của menu được liên kết với một view.",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".menuStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".fixedSize()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập hoặc thay đổi lược đồ màu (color scheme) của view và các view con. Lược đồ màu xác định màu sắc giao diện (giống như chế độ sáng/tối).",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".colorScheme()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng cho một view để điều khiển hành vi lật nội dung.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".flipsForRightToLeftLayoutDirection()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng cho một Text Editor view để thiết lập kiểu (ví dụ: .plain, .bordered)",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".textEditorStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng cho một Toggle view để thiết lập kiểu (ví dụ: .switch, .slider).",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".toggleStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Ẩn thanh trạng thái",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".statusBarHidden()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định bàn phím ảo xuất hiện khi người dùng tương tác với một Text Editor view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".keyboardType()",
+            "parent": "View"
+        },
+        {
+            "description": "Bật/tắt tự động viết hoa cho Text Editor view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".autocapitalization()",
+            "parent": "View"
+        },
+        {
+            "description": "Thuộc tính textInputAutocapitalization đã bị gỡ bỏ từ iOS 14 trở lên. Sử dụng autocapitalization thay thế",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".textInputAutocapitalization()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập giá trị focus hiện tại của một view. Focus cho biết view nào đang nhận đầu vào từ người dùng (ví dụ: bàn phím)",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".focusedValue()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".foregroundColor()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát độ nổi bật của header trong một List view",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".headerProminence()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".tint()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".modifier()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định kiểu dáng của chỉ mục (index) được hiển thị trong một List view.",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".indexViewStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng cho một view để điều khiển thứ tự menu.",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".menuOrder()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát kiểu dáng của TabBar view.",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".tabViewStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm soát hiệu ứng chuyển đổi giữa các view trong một animation",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".phaseAnimator()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập khoảng lề (margin) cho nội dung của một view.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".contentMargins()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập kiểu hiển thị mặc định cho các nhóm tiết lộ (disclosure group).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".disclosureGroupStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hình dạng của một view để tính toán các tương tác cảm ứng.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".contentShape()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập thứ tự sắp xếp các view con trong menu.",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".menuOrder()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập trạng thái focus mặc định cho một view.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".defaultFocus()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hành vi khi người dùng di chuột hoặc trackpad liên tục trên một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".onContinuousHover()",
+            "parent": "View"
+        },
+        {
+            "description": "Lặp lại hành vi của `.onContinuousHover()` nhưng dành cho các thiết bị hỗ trợ bàn phím ảo (như iPad).",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".onContinuousHover()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng hiệu ứng symbol cho một view.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".symbolEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập hoặc thiết lập vị trí cuộn hiện tại của một view cuộn (scroll view).",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".scrollPosition()",
+            "parent": "View"
+        },
+        {
+            "description": "Chạy một khối mã theo async/await pattern ngay trong body của một view.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".task()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hành vi nảy (spring) cho các tương tác kéo/thả trên một view.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".springLoadingBehavior()",
+            "parent": "View"
+        },
+        {
+            "description": "Cho phép view này có thể tìm kiếm được.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".searchable()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng hiệu ứng chuyển đổi hình ảnh động cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".transition()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập hoặc thiết lập khoảng đệm an toàn (safe area) bên trong của một view.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".safeAreaInset()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập khoảng đệm an toàn (safe area) xung quanh nội dung của một view.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".safeAreaPadding()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập kiểu hiển thị cho một navigation view trong split view controller.",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".navigationSplitViewStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Cho phép hoặc ngăn chặn việc view này nhận sự kiện chạm (hit testing).",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".allowsHitTesting()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập hoặc thiết lập các biến môi trường trong một view hierarchy.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".environment()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hình dạng của một view để tính toán các tương tác cảm ứng (duplicate of entry #3).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".contentShape()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng chuyển đổi cho hoạt ảnh cuộn của một view cuộn (scroll view).",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".scrollTransition()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập hoặc thiết lập các item trên navigation bar của một view controller.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".navigationBarItems()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập view tương đương với kiểu chọn type (nếu có) cho một view.",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".typeSelectEquivalent()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hành vi khi người dùng di chuột hoặc trackpad trên một view (deprecated in iOS 14, use .onHover instead).",
+            "fullText": "",
+            "ios": "13.4",
+            "keyword": ".onHover()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập ngăn cách giữa các section trong một danh sách (list).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".listSectionSeparator()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hành vi khi giá trị của một preference thay đổi.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".onPreferenceChange()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập biến thể (variant) của symbol được sử dụng cho một view.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".symbolVariant()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập thư mục mặc định cho file dialog.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".fileDialogDefaultDirectory()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập ID tùy chỉnh cho file dialog.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".fileDialogCustomizationID()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập message hiển thị trong file dialog.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".fileDialogMessage()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập nhãn xác nhận cho file dialog.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".fileDialogConfirmationLabel()",
+            "parent": "View"
+        },
+        {
+            "description": "Cho phép người dùng nhập URL trong file dialog.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".fileDialogURLEnabled()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập nhãn cho tên file được xuất (file exporter).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".fileExporterFilenameLabel()",
+            "parent": "View"
+        },
+        {
+            "description": "Cho phép file dialog nhập các alias chưa được giải quyết.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".fileDialogImportsUnresolvedAliases()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập các tùy chọn trình duyệt của file dialog.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".fileDialogBrowserOptions()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định gesture recognizer cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".gesture()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định gesture recognizer với độ ưu tiên cao cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".highPriorityGesture()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định gesture recognizer có thể nhận dạng đồng thời với các gesture khác cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".simultaneousGesture()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập nút chuyển đổi để tắt/bật hiển thị dialog.",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".dialogSuppressionToggle()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng mask (mặt nạ) cho một view để che khuất một phần nội dung.",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".mask()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập màu nền cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".background()",
+            "parent": "View"
+        },
+        {
+            "description": "Thêm một lớp overlay (tr chồng) lên trên một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".overlay()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập đường viền cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".border()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định sheet (bảng thông tin) được presentations từ một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".sheet()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định một full screen cover presentation từ một view (iOS 14 trở lên).",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".fullScreenCover()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập tỉ lệ khung hình cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".aspectRatio()",
+            "parent": "View"
+        },
+        {
+            "description": "Điều chỉnh nội dung con của một view để vừa với kích thước của view (giữ nguyên tỉ lệ).",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".scaledToFit()",
+            "parent": "View"
+        },
+        {
+            "description": "Điều chỉnh nội dung con của một view để 채 đầy kích thước của view (có thể làm biến dạng nội dung).",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".scaledToFill()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập kho lưu trữ mặc định của ứng dụng (iOS 14 trở lên).",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".defaultAppStorage()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hành vi khi người dùng submit (gửi) một form trong một view (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".onSubmit()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập scope (phạm vi) cho submit form trong một view (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".submitScope()",
+            "parent": "View"
+        },
+        {
+            "description": "Ẩn hoặc hiện navigation bar của một view controller.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".navigationBarHidden()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập tiêu đề cho navigation bar của một view controller.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".navigationBarTitle()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập khoảng đệm cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".padding()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập khoảng đệm cho một scene (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".scenePadding()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập style cho button của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".buttonStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập trạng thái focus cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".focused()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập hoặc thiết lập vị trí offset của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".offset()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập hoặc thiết lập vị trí của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".position()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập nhãn cho nút submit trong một form (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".submitLabel()",
+            "parent": "View"
+        },
+        {
+            "description": "Cho phép bật/tắt khả năng refresh cho một view (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".refreshable()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định geometry group cho một view (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".geometryGroup()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng projection cho một view (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".projectionEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Áp dụng hiệu ứng biến đổi (transform) cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".transformEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hiệu ứng hover (di chuột/trackpad) cho một view (iOS 13.4, **deprecated** in iOS 17, use .hoverEffect instead).",
+            "fullText": "",
+            "ios": "13.4",
+            "keyword": ".hoverEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hiệu ứng hover (di chuột/trackpad) cho một view (iOS 17).",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".hoverEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng hover mặc định cho một view (iOS 17).",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".defaultHoverEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng xoay cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".rotationEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng co/kéo (scale) cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".scaleEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Bật/tắt hiệu ứng hover cho một view (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".hoverEffectDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng mờ (blur) cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".blur()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập độ sáng cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".brightness()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hành vi khi một view xuất hiện trên màn hình.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".onAppear()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định hành vi khi một view消失 (biến mất) khỏi màn hình.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".onDisappear()",
+            "parent": "View"
+        },
+        {
+            "description": "Đảo ngược màu sắc của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".colorInvert()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng nhân màu cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".colorMultiply()",
+            "parent": "View"
+        },
+        {
+            "description": "Điều chỉnh độ tương phản cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".contrast()",
+            "parent": "View"
+        },
+        {
+            "description": "Chuyển đổi màu sắc của một view sang thang độ xám.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".grayscale()",
+            "parent": "View"
+        },
+        {
+            "description": "Xoay vòng màu sắc của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".hueRotation()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập style cho navigation view của một view controller.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".navigationViewStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hình dạng container của một view (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".containerShape()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập persistent system overlays cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".persistentSystemOverlays()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định context menu cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".contextMenu()",
+            "parent": "View"
+        },
+        {
+            "description": "Chuyển đổi giá trị luminance sang alpha channel của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".luminanceToAlpha()",
+            "parent": "View"
+        },
+        {
+            "description": "Điều chỉnh độ bão hòa màu sắc của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".saturation()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập độ mờ cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".opacity()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập màu nền cho toolbar (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".toolbarBackground()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập color scheme cho toolbar (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".toolbarColorScheme()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định toolbar cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".toolbar()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập animation cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".animation()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập blend mode (chế độ trộn) cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".blendMode()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng lựa chọn bảng màu (palette selection) cho một view (iOS 17 trở lên).",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".paletteSelectionEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập style cho button của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".buttonStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập style cho text field của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".textFieldStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định drawing group cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".drawingGroup()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng bóng cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".shadow()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập gợi ý tìm kiếm (search suggestions) cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".searchSuggestions()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập tab item cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".tabItem()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định anchor preference cho một view ",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".anchorPreference()",
+            "parent": "View"
+        },
+        {
+            "description": "Bật/tắt khả năng di chuyển của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".moveDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập màu nền cho nội dung scroll của một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".scrollContentBackground()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng xoay 3D cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".rotation3DEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập layout priority cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".layoutPriority()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập hoặc thiết lập inspector cho một view (chỉ dành cho SwiftUI, iOS 17 trở lên).",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".inspector()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập chiều rộng của cột inspector cho một view (chỉ dành cho SwiftUI, iOS 17 trở lên).",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".inspectorColumnWidth()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập tỉ lệ giãn cho ảnh của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".imageScale()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập font chữ cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".font()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập font chữ với ký tự间隔 đều (monospaced) cho một view (iOS 15 trở lên).",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".monospacedDigit()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập font chữ với ký tự间隔 đều (monospaced) cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".monospaced()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập độ đậm của font chữ cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".fontWeight()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập chiều rộng của font chữ cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".fontWidth()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập font chữ in đậm cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".bold()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập font chữ in nghiêng cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".italic()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập font design cho một view (iOS 16.1 trở lên).",
+            "fullText": "",
+            "ios": "16.1",
+            "keyword": ".fontDesign()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập kerning (khoảng cách giữa các ký tự) cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".kerning()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập tracking (khoảng cách giữa các chữ) cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".tracking()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập baseline offset (độ dịch chuyển đường baseline) cho một view (iOS 16 trở lên).",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".baselineOffset()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập style cho progress view của một view (iOS 14 trở lên).",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".progressViewStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập thiết bị preview cho một view ",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".previewDevice()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập layout preview cho một view ",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".previewLayout()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập tên hiển thị preview cho một view ",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".previewDisplayName()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập context preview cho một view (chỉ dành cho SwiftUI, iOS 14 trở lên).",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".previewContext()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hướng giao diện preview cho một view",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".previewInterfaceOrientation()",
+            "parent": "View"
+        },
+        {
+            "description": "Xác định popover cho một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".popover()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập environment (môi trường) cho một view",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".environment()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập số dòng hiển thị tối đa cho văn bản của một view.",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".lineLimit()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiển thị thanh cuộn (scroll indicators) cho một view ",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".scrollIndicators()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng nhấp nháy thanh cuộn cho một view",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".scrollIndicatorsFlash()",
+            "parent": "View"
+        },
+        {
+            "description": "Bật/tắt khả năng cuộn của một view",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".scrollDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập default scroll anchor cho một view",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".defaultScrollAnchor()",
+            "parent": "View"
+        },{
+            "description": "Thiết lập scroll bounce behavior",
+            "fullText": "",
+            "ios": "16.4",
+            "keyword": ".scrollBounceBehavior()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập màu sắc cho list item",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".listItemTint()",
+            "parent": "View"
+        },
+        {
+            "description": "Ẩn nhãn của view",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".labelsHidden()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập màu nền container",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".containerBackground()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập tag cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".tag()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập style cho picker",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".pickerStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập khoảng cách giữa các section trong list",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".listSectionSpacing()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập id cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".id()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập menu action dismiss behavior",
+            "fullText": "",
+            "ios": "16.4",
+            "keyword": ".menuActionDismissBehavior()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập màu nhấn cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".accentColor()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hình dạng clipping cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".clipShape()",
+            "parent": "View"
+        },
+        {
+            "description": "Bật/tắt clipping cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".clipped()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập góc bo tròn cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".cornerRadius()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hiệu ứng matched geometry cho view (iOS 14 trở lên)",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".matchedGeometryEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập search completion cho view (iOS 15 trở lên)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".searchCompletion()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập search suggestions cho view (iOS 16 trở lên)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".searchSuggestions()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập giá trị layout của view (iOS 16 trở lên)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".layoutValue()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập hình dạng border cho button (iOS 15 trở lên)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".buttonBorderShape()",
+            "parent": "View"
+        },
+        {
+            "description": "Truy cập coordinate space của view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".coordinateSpace()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập environment object cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".environmentObject()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập style cho form",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".formStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Kiểm tra tính chất equatable (so sánh bằng nhau) của view",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".equatable()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập foreground style cho view (iOS 15 trở lên)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".foregroundStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập swipe actions cho view (iOS 15 trở lên)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".swipeActions()",
+            "parent": "View"
+        },
+        {
+            "description": "Bật/tắt khả năng xóa của view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".deleteDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập dynamic type size cho view (iOS 15 trở lên)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".dynamicTypeSize()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập gạch chân cho view (iOS 16 trở lên)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".underline()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập gạch ngang cho view (iOS 16 trở lên)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".strikethrough()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập navigation document cho view",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".navigationDocument()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập khoảng cách giữa các hàng trong danh sách",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".listRowSpacing()",
+            "parent": "View"
+        },
+        {
+            "description": "Thêm thanh công cụ cho view (iOS 17 trở lên)",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".toolbar()",
+            "parent": "View"
+        },
+        {
+            "description": "Bắt sự kiện nhấn giữ lâu trên view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".onLongPressGesture()",
+            "parent": "View"
+        },
+        {
+            "description": "Hiển thị hộp thoại xác nhận (iOS 15 trở lên)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".confirmationDialog()",
+            "parent": "View"
+        },
+        {
+            "description": "Bỏ qua vùng safe area cho view (chú ý sử dụng thận trọng)",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".ignoresSafeArea()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập số cột cho ô lưới (iOS 15 trở lên)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".gridCellColumns()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập neo cho ô lưới (iOS 16 trở lên)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".gridCellAnchor()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập căn chỉnh cho các cột trong lưới (iOS 16 trở lên)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".gridColumnAlignment()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập trục không bị co giãn cho ô lưới (iOS 16 trở lên)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".gridCellUnsizedAxes()",
+            "parent": "View"
+        },
+        {
+            "description": "Thêm hiệu ứng thị giác cho view (iOS 15 trở lên)",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".visualEffect()",
+            "parent": "View"
+        },
+        {
+            "description": "Bật/tắt hiệu ứng hover (iOS 17 trở lên)",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".hoverEffectDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "Bắt sự kiện chạm (tap) trên view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".onTapGesture()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập preferred color scheme cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".preferredColorScheme()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập title cho navigation bar",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".navigationTitle()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập chế độ hiển thị title cho navigation bar",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".navigationBarTitleDisplayMode()",
+            "parent": "View"
+        },
+        {
+            "description": "Trì hoãn các cử chỉ hệ thống (iOS 16 trở lên)",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".defersSystemGestures()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập anchor ưu tiên cho transform animation",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".transformAnchorPreference()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập text content type cho view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".textContentType()",
+            "parent": "View"
+        },
+        {
+            "description": "Thiết lập observer để theo dõi sự thay đổi của view",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".onChange()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".onKeyPress()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".hidden()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".menuIndicator()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".focusedValue()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".focusedSceneValue()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".tableStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".controlSize()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".gaugeStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".tableColumnHeaders()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".toolbarTitleDisplayMode()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".badge()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".controlGroupStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".keyboardShortcut()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".autocorrectionDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".disableAutocorrection()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".searchDictationBehavior()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".frame()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".privacySensitive()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".presentationDetents()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".presentationDragIndicator()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.4",
+            "keyword": ".presentationBackgroundInteraction()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.4",
+            "keyword": ".presentationCompactAdaptation()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.4",
+            "keyword": ".presentationCornerRadius()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.4",
+            "keyword": ".presentationContentInteraction()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".buttonRepeatBehavior()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".textScale()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".contextMenu()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".fileMover()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".textSelection()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".focusable()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".toolbarRole()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".fileExporter()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".symbolRenderingMode()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".interactiveDismissDisabled()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".labeledContentStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".interactionActivityTrackingTag()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.4",
+            "keyword": ".presentationBackground()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".renameAction()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "17.0",
+            "keyword": ".badgeProminence()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".transaction()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".focusedObject()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".help()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "154.0",
+            "keyword": ".listRowBackground()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "14.0",
+            "keyword": ".labelStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".onDrag()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "16.0",
+            "keyword": ".draggable()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "15.0",
+            "keyword": ".datePickerStyle()",
+            "parent": "View"
+        },
+        {
+            "description": "",
+            "fullText": "",
+            "ios": "13.0",
+            "keyword": ".disabled()",
+            "parent": "View"
+        }
+    ]
 }
 

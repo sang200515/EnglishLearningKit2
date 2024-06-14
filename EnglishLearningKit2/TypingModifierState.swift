@@ -24,7 +24,7 @@ final class ModifierState: ObservableObject {
     //    var ipaString: String {
     //        let synthesizer = AVSpeechSynthesizer()
     //        let utterance = AVSpeechUtterance(string: textForSpeech)
-    // 
+    //
     //    }
     init() {
         loadModifiersFromJSON()
@@ -94,6 +94,9 @@ final class ModifierState: ObservableObject {
                 let data = try Data(contentsOf: url)
                 let modifiers = try JSONDecoder().decode(ModifierInfo.self, from: data)
                 DispatchQueue.main.async {
+                    if modifiers.modifiers.count > 0 {
+                        print("parser success \(modifiers.modifiers.count)")
+                    }
                     self.items = modifiers.modifiers
                     self.removeRandomItem()
                 }
