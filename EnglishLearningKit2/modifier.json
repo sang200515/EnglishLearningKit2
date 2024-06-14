@@ -1,0 +1,2049 @@
+{
+  "modifiers": [
+    {
+      "description": "Ẩn nội dung của một view, thay thế bằng một placeholder như nền mờ hoặc lớp phủ màu",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".redacted",
+      "parent": "View"
+    },
+    {
+      "description": "Tiết lộ nội dung của một view đã bị redact trước đây",
+      "fullText": "public func unredacted() -> some View",
+      "ios": "14.0",
+      "keyword": ".unredacted()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".actionSheet",
+      "parent": "View"
+    },
+    {
+      "description": "Điều chỉnh khoảng cách (khoảng cách) xung quanh nội dung của một hàng trong danh sách như UITableView hoặc List",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".listRowInsets()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".alert()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát cách thức một view hoạt động khi nó trở thành mục tiêu cuộn của một container có thể cuộn.",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".scrollTargetBehavior()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát cách thức một view được bố trí trong một container có thể cuộn khi nó trở thành mục tiêu cuộn",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".scrollTargetLayout()",
+      "parent": "View"
+    },
+    {
+      "description": "Lấy khung của một view tương đối với ranh giới container của nó",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".containerRelativeFrame()",
+      "parent": "View"
+    },
+    {
+      "description": "Xác định view đích để di chuyển đến khi NavigationLink được nhấn.",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".navigationDestination()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".multilineTextAlignment()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát cách thức văn bản bị cắt bớt (cắt đứt) khi nó tràn ra khỏi ranh giới của view\n.lineBreak: Chia nhỏ văn bản thành nhiều dòng nếu cần thiết.\n.head: Cắt bớt phần đầu của văn bản với dấu chấm lửng ở cuối.\n.middle: Cắt bớt phần giữa của văn bản với dấu chấm lửng ở cả hai đầu.\n.tail: Cắt bớt phần cuối của văn bản với dấu chấm lửng ở đầu.\n.clip: Đơn giản là cắt bớt văn bản mà không có dấu chấm lửng",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".truncationMode()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".lineSpacing()",
+      "parent": "View"
+    },
+    {
+      "description": "Cho phép thắt chặt cho nhiều ký tự hơn(make text scale to fit)",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".allowsTightening()",
+      "parent": "View"
+    },
+    {
+      "description": ".minimumScaleFactor(0.5) Cho phép thu nhỏ logo đến 50% kích thước gốc",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".minimumScaleFactor()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát cách chữ hoa chữ thường được xử lý trong một Text view",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".textCase()",
+      "parent": "View"
+    },
+    {
+      "description": "Tạo hiệu ứng hoạt hình phức tạp cho các animation tùy chỉnh trong SwiftUI",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".keyframeAnimator()",
+      "parent": "View"
+    },
+    {
+      "description": "Phản hồi xúc giác nhẹ khi người dùng chạm vào view",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".sensoryFeedback()",
+      "parent": "View"
+    },
+    {
+      "description": "Xử lý thao tác thả (drop) dữ liệu từ một view khác vào view hiện tại",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".onDrop()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát xem một view có thể là đích đến hợp lệ cho thao tác thả dữ liệu hay không",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".dropDestination()",
+      "parent": "View"
+    },
+    {
+      "description": "Đánh dấu nội dung của một view là có thể thay đổi bất thường, ảnh hưởng đến việc SwiftUI quyết định thời điểm cần cập nhật giao diện",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".invalidatableContent()",
+      "parent": "View"
+    },
+    {
+      "description": "Xác định thứ tự xếp chồng của các view. View có giá trị zIndex cao hơn sẽ được hiển thị phía trước các view khác",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".zIndex()",
+      "parent": "View"
+    },
+    {
+      "description": "Tìm kiếm đối tượng điều hướng (navigation) được liên kết với một view trong NavigationView",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".findNavigator()",
+      "parent": "View"
+    },
+    {
+      "description": "Tìm kiếm control (phần tử điều khiển) bị vô hiệu hóa trong một hierarchy (cây thư mục) view",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".findDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "Thay thế hành vi mặc định của Toggle khi bị vô hiệu hóa",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".replaceDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".allowedDynamicRange()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".speechAlwaysIncludesPunctuation()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát việc đọc các dấu câu trong Text view bằng tính năng đọc thành tiếng (text-to-speech)",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".speechSpellsOutCharacters()",
+      "parent": "View"
+    },
+    {
+      "description": "Điều chỉnh cao độ giọng nói được sử dụng cho Text view bằng tính năng đọc thành tiếng",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".speechAdjustedPitch()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát cách các thông báo bằng giọng nói (speech announcements) được xếp hàng đợi trong Text view",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".speechAnnouncementsQueued()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát hình nền (background) của một view. Có thể sử dụng hình ảnh, màu sắc, hoặc gradient",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".backgroundStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "sử dụng để xác định cách mà view con sẽ được căn chỉnh trong view cha",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".alignmentGuide()",
+      "parent": "View"
+    },
+    {
+      "description": "Xác định các phạm vi tìm kiếm (search scopes) khả dụng cho một view hỗ trợ tìm kiếm (Searchable)",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".searchScopes()",
+      "parent": "View"
+    },
+    {
+      "description": "Loại bỏ các hiệu ứng (effect) mặc định khỏi một SFSymbol view.",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".symbolEffectsRemoved()",
+      "parent": "View"
+    },
+    {
+      "description": "Bật/tắt khả năng chọn các mục trong một List view",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".selectionDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "Liên kết một user activity với một view. User activity đại diện cho một tác vụ người dùng có thể tiếp tục trên các thiết bị khác nhau của người dùng",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".userActivity()",
+      "parent": "View"
+    },
+    {
+      "description": "Phản hồi với hoạt động của người dùng tiếp tục (continued user activity) trong một view cụ thể. Hoạt động của người dùng cho phép họ tiếp tục các tác vụ dang dở trên các thiết bị khác nhau",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".onContinueUserActivity()",
+      "parent": "View"
+    },
+    {
+      "description": "Phản hồi với một liên kết universal link (URL) mở ứng dụng của bạn. Universal link cho phép người dùng mở ứng dụng của bạn trực tiếp từ một liên kết.",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".onOpenURL()",
+      "parent": "View"
+    },
+    {
+      "description": "Chỉ định các loại sự kiện bên ngoài mà một view có thể xử lý. Sự kiện bên ngoài bao gồm các thứ như liên kết universal link, handoff và hoạt động của người dùng (user activities).",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".handlesExternalEvents()",
+      "parent": "View"
+    },
+    {
+      "description": "Thay đổi các giá trị môi trường cho một hierarchy view (cấu trúc các view lồng nhau). Giá trị môi trường là các cài đặt trên toàn hệ thống có thể được truy cập bởi các view con.",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".transformEnvironment()",
+      "parent": "View"
+    },
+    {
+      "description": "Áp dụng bộ lọc hiệu ứng màu cho một view.",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".colorEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "Áp dụng hiệu ứng biến dạng cho một view.",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".distortionEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".layerEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".transformPreference()",
+      "parent": "View"
+    },
+    {
+      "description": "Phản hồi với những thay đổi giá trị từ một @ObservedObject hoặc một publisher (phát hành dữ liệu)",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".onReceive()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát kiểu dáng của menu được liên kết với một view.",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".menuStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".fixedSize()",
+      "parent": "View"
+    },
+    {
+      "description": "Truy cập hoặc thay đổi lược đồ màu (color scheme) của view và các view con. Lược đồ màu xác định màu sắc giao diện (giống như chế độ sáng/tối).",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".colorScheme()",
+      "parent": "View"
+    },
+    {
+      "description": "Áp dụng cho một view để điều khiển hành vi lật nội dung.",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".flipsForRightToLeftLayoutDirection()",
+      "parent": "View"
+    },
+    {
+      "description": "Áp dụng cho một Text Editor view để thiết lập kiểu (ví dụ: .plain, .bordered)",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".textEditorStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "Áp dụng cho một Toggle view để thiết lập kiểu (ví dụ: .switch, .slider).",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".toggleStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "Ẩn thanh trạng thái",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".statusBarHidden()",
+      "parent": "View"
+    },
+    {
+      "description": "Xác định bàn phím ảo xuất hiện khi người dùng tương tác với một Text Editor view.",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".keyboardType()",
+      "parent": "View"
+    },
+    {
+      "description": "Bật/tắt tự động viết hoa cho Text Editor view.",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".autocapitalization()",
+      "parent": "View"
+    },
+    {
+      "description": "Thuộc tính textInputAutocapitalization đã bị gỡ bỏ từ iOS 14 trở lên. Sử dụng autocapitalization thay thế",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".textInputAutocapitalization()",
+      "parent": "View"
+    },
+    {
+      "description": "Truy cập giá trị focus hiện tại của một view. Focus cho biết view nào đang nhận đầu vào từ người dùng (ví dụ: bàn phím)",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".focusedValue()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".foregroundColor()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát độ nổi bật của header trong một List view",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".headerProminence()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".tint()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".modifier()",
+      "parent": "View"
+    },
+    {
+      "description": "Xác định kiểu dáng của chỉ mục (index) được hiển thị trong một List view.",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".indexViewStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "Áp dụng cho một view để điều khiển thứ tự menu.",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".menuOrder()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát kiểu dáng của TabBar view.",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".tabViewStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "Kiểm soát hiệu ứng chuyển đổi giữa các view trong một animation",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".phaseAnimator()",
+      "parent": "View"
+    },
+    {
+      "description": "Thiết lập khoảng lề (margin) cho nội dung của một view.",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".contentMargins()",
+      "parent": "View"
+    },
+    {
+      "description": "Thiết lập kiểu hiển thị mặc định cho các nhóm tiết lộ (disclosure group).",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".disclosureGroupStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "Xác định hình dạng của một view để tính toán các tương tác cảm ứng.",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".contentShape()",
+      "parent": "View"
+    },
+    {
+      "description": "Thiết lập thứ tự sắp xếp các view con trong menu.",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".menuOrder()",
+      "parent": "View"
+    },
+    {
+      "description": "Thiết lập trạng thái focus mặc định cho một view.",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".defaultFocus()",
+      "parent": "View"
+    },
+    {
+      "description": "Xác định hành vi khi người dùng di chuột hoặc trackpad liên tục trên một view.",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".onContinuousHover()",
+      "parent": "View"
+    },
+    {
+      "description": "Lặp lại hành vi của `.onContinuousHover()` nhưng dành cho các thiết bị hỗ trợ bàn phím ảo (như iPad).",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".onContinuousHover()",
+      "parent": "View"
+    },
+    {
+      "description": "Áp dụng hiệu ứng symbol cho một view.",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".symbolEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".scrollPosition()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".task()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".springLoadingBehavior()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".searchable()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".transition()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".safeAreaInset()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".safeAreaPadding()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".navigationSplitViewStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".allowsHitTesting()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".environment()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".contentShape()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".scrollTransition()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".navigationBarItems()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".typeSelectEquivalent()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.4",
+      "keyword": ".onHover()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".listRowSeparator()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".listRowSeparatorTint()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".listSectionSeparator()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".onPreferenceChange()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".symbolVariant()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".fileDialogDefaultDirectory()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".fileDialogCustomizationID()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".fileDialogMessage()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".fileDialogConfirmationLabel()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".fileDialogURLEnabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".fileExporterFilenameLabel()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".fileDialogImportsUnresolvedAliases()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".fileDialogBrowserOptions()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".gesture()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".highPriorityGesture()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".simultaneousGesture()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".dialogSuppressionToggle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".dialogSuppressionToggle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".fileImporter()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".mask()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".background()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".overlay()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".border()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".sheet()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".fullScreenCover()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".aspectRatio()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".scaledToFit()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".scaledToFill()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".defaultAppStorage()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".onSubmit()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".submitScope()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".navigationBarHidden()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".navigationBarTitle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".padding()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".scenePadding()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".buttonStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".focused()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".offset()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".position()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".submitLabel()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".refreshable()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".geometryGroup()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".projectionEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".transformEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.4",
+      "keyword": ".hoverEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".hoverEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".defaultHoverEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".rotationEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".scaleEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".hoverEffectDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".blur()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".brightness()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".onAppear()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".onDisappear()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".colorInvert()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".colorMultiply()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".contrast()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".grayscale()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".hueRotation()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".navigationViewStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".containerShape()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".persistentSystemOverlays()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".contextMenu()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".luminanceToAlpha()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".saturation()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".opacity()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".toolbarBackground()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".toolbarColorScheme()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".toolbar()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".animation()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".blendMode()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".paletteSelectionEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".buttonStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".textFieldStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".drawingGroup()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".shadow()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".searchSuggestions()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".tabItem()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".anchorPreference()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".moveDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".scrollContentBackground()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".rotation3DEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".layoutPriority()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".inspector()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".inspectorColumnWidth()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".imageScale()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".font()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".monospacedDigit()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".monospaced()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".fontWeight()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".fontWidth()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".bold()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".italic()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.1",
+      "keyword": ".fontDesign()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".kerning()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".tracking()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".baselineOffset()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".progressViewStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".previewDevice()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".previewLayout()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".previewDisplayName()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".previewContext()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".previewInterfaceOrientation()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".popover()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".environment()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".lineLimit()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".scrollIndicators()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".scrollIndicatorsFlash()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".scrollDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".defaultScrollAnchor()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.4",
+      "keyword": ".scrollBounceBehavior()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".listItemTint()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".labelsHidden()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".containerBackground()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".tag()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".pickerStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".listSectionSpacing()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".id()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.4",
+      "keyword": ".menuActionDismissBehavior()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".accentColor()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".clipShape()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".clipped()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".cornerRadius()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".matchedGeometryEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".searchCompletion()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".searchSuggestions()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".layoutValue()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".buttonBorderShape()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".coordinateSpace()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".environmentObject()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".formStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".equatable()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".foregroundStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".swipeActions()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".deleteDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".dynamicTypeSize()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".underline()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".strikethrough()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".navigationDocument()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".listRowSpacing()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".toolbar()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".onLongPressGesture()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".confirmationDialog()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".ignoresSafeArea()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".gridCellColumns()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".gridCellAnchor()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".gridColumnAlignment()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".gridCellUnsizedAxes()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".visualEffect()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".hoverEffectDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".onTapGesture()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".preferredColorScheme()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".navigationTitle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".navigationBarTitleDisplayMode()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".defersSystemGestures()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".transformAnchorPreference()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".textContentType()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".onChange()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".onKeyPress()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".hidden()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".menuIndicator()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".focusedValue()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".focusedSceneValue()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".tableStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".controlSize()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".gaugeStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".tableColumnHeaders()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".toolbarTitleDisplayMode()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".badge()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".controlGroupStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".keyboardShortcut()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".autocorrectionDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".disableAutocorrection()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".searchDictationBehavior()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".frame()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".privacySensitive()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".presentationDetents()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".presentationDragIndicator()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.4",
+      "keyword": ".presentationBackgroundInteraction()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.4",
+      "keyword": ".presentationCompactAdaptation()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.4",
+      "keyword": ".presentationCornerRadius()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.4",
+      "keyword": ".presentationContentInteraction()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".buttonRepeatBehavior()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".textScale()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".contextMenu()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".fileMover()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".textSelection()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".focusable()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".toolbarRole()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".fileExporter()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".symbolRenderingMode()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".interactiveDismissDisabled()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".labeledContentStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".interactionActivityTrackingTag()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.4",
+      "keyword": ".presentationBackground()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".renameAction()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "17.0",
+      "keyword": ".badgeProminence()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".transaction()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".focusedObject()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".help()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "154.0",
+      "keyword": ".listRowBackground()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "14.0",
+      "keyword": ".labelStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".onDrag()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "16.0",
+      "keyword": ".draggable()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "15.0",
+      "keyword": ".datePickerStyle()",
+      "parent": "View"
+    },
+    {
+      "description": "",
+      "fullText": "",
+      "ios": "13.0",
+      "keyword": ".disabled()",
+      "parent": "View"
+    }
+  ]
+}
+
