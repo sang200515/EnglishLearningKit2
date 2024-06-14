@@ -743,7 +743,7 @@
             "parent": "View"
         },
         {
-            "description": "Xác định một full screen cover presentation từ một view (iOS 14 trở lên).",
+            "description": "Xác định một full screen cover presentation từ một view.",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".fullScreenCover()",
@@ -771,21 +771,21 @@
             "parent": "View"
         },
         {
-            "description": "Truy cập kho lưu trữ mặc định của ứng dụng (iOS 14 trở lên).",
+            "description": "Truy cập kho lưu trữ mặc định của ứng dụng.",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".defaultAppStorage()",
             "parent": "View"
         },
         {
-            "description": "Xác định hành vi khi người dùng submit (gửi) một form trong một view (iOS 15 trở lên).",
+            "description": "Xác định hành vi khi người dùng submit (gửi) một form trong một view.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".onSubmit()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập scope (phạm vi) cho submit form trong một view (iOS 15 trở lên).",
+            "description": "Thiết lập scope (phạm vi) cho submit form trong một view.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".submitScope()",
@@ -813,7 +813,7 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập khoảng đệm cho một scene (iOS 15 trở lên).",
+            "description": "Thiết lập khoảng đệm cho một scene.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".scenePadding()",
@@ -848,28 +848,28 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập nhãn cho nút submit trong một form (iOS 15 trở lên).",
+            "description": "Thiết lập nhãn cho nút submit trong một form.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".submitLabel()",
             "parent": "View"
         },
         {
-            "description": "Cho phép bật/tắt khả năng refresh cho một view (iOS 15 trở lên).",
+            "description": "Cho phép bật/tắt khả năng refresh cho một view.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".refreshable()",
             "parent": "View"
         },
         {
-            "description": "Xác định geometry group cho một view (iOS 15 trở lên).",
+            "description": "Xác định geometry group cho một view.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".geometryGroup()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập hiệu ứng projection cho một view (iOS 15 trở lên).",
+            "description": "Thiết lập hiệu ứng projection cho một view.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".projectionEffect()",
@@ -918,7 +918,7 @@
             "parent": "View"
         },
         {
-            "description": "Bật/tắt hiệu ứng hover cho một view (iOS 15 trở lên).",
+            "description": "Bật/tắt hiệu ứng hover cho một view.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".hoverEffectDisabled()",
@@ -995,14 +995,14 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập hình dạng container của một view (iOS 15 trở lên).",
+            "description": "Thiết lập hình dạng container của một view.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".containerShape()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập persistent system overlays cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập persistent system overlays cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".persistentSystemOverlays()",
@@ -1037,21 +1037,21 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập màu nền cho toolbar (iOS 16 trở lên).",
+            "description": "Thiết lập màu nền cho toolbar.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".toolbarBackground()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập color scheme cho toolbar (iOS 16 trở lên).",
+            "description": "Thiết lập color scheme cho toolbar.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".toolbarColorScheme()",
             "parent": "View"
         },
         {
-            "description": "Xác định toolbar cho một view (iOS 16 trở lên).",
+            "description": "Xác định toolbar cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".toolbar()",
@@ -1072,7 +1072,7 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập hiệu ứng lựa chọn bảng màu (palette selection) cho một view (iOS 17 trở lên).",
+            "description": "Thiết lập hiệu ứng lựa chọn bảng màu (palette selection) cho một view.",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".paletteSelectionEffect()",
@@ -1107,7 +1107,7 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập gợi ý tìm kiếm (search suggestions) cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập gợi ý tìm kiếm (search suggestions) cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".searchSuggestions()",
@@ -1135,7 +1135,7 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập màu nền cho nội dung scroll của một view (iOS 16 trở lên).",
+            "description": "Thiết lập màu nền cho nội dung scroll của một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".scrollContentBackground()",
@@ -1156,14 +1156,14 @@
             "parent": "View"
         },
         {
-            "description": "Truy cập hoặc thiết lập inspector cho một view (chỉ dành cho SwiftUI, iOS 17 trở lên).",
+            "description": "Truy cập hoặc thiết lập inspector cho một view ",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".inspector()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập chiều rộng của cột inspector cho một view (chỉ dành cho SwiftUI, iOS 17 trở lên).",
+            "description": "Thiết lập chiều rộng của cột inspector cho một view ",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".inspectorColumnWidth()",
@@ -1184,77 +1184,77 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập font chữ với ký tự间隔 đều (monospaced) cho một view (iOS 15 trở lên).",
+            "description": "Thiết lập font chữ với ký tự间隔 đều (monospaced) cho một view.",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".monospacedDigit()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập font chữ với ký tự间隔 đều (monospaced) cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập font chữ với ký tự间隔 đều (monospaced) cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".monospaced()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập độ đậm của font chữ cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập độ đậm của font chữ cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".fontWeight()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập chiều rộng của font chữ cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập chiều rộng của font chữ cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".fontWidth()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập font chữ in đậm cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập font chữ in đậm cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".bold()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập font chữ in nghiêng cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập font chữ in nghiêng cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".italic()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập font design cho một view (iOS 16.1 trở lên).",
+            "description": "Thiết lập font design cho một view ",
             "fullText": "",
             "ios": "16.1",
             "keyword": ".fontDesign()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập kerning (khoảng cách giữa các ký tự) cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập kerning (khoảng cách giữa các ký tự) cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".kerning()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập tracking (khoảng cách giữa các chữ) cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập tracking (khoảng cách giữa các chữ) cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".tracking()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập baseline offset (độ dịch chuyển đường baseline) cho một view (iOS 16 trở lên).",
+            "description": "Thiết lập baseline offset (độ dịch chuyển đường baseline) cho một view.",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".baselineOffset()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập style cho progress view của một view (iOS 14 trở lên).",
+            "description": "Thiết lập style cho progress view của một view.",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".progressViewStyle()",
@@ -1282,7 +1282,7 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập context preview cho một view (chỉ dành cho SwiftUI, iOS 14 trở lên).",
+            "description": "Thiết lập context preview cho một view ",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".previewContext()",
@@ -1435,35 +1435,35 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập hiệu ứng matched geometry cho view (iOS 14 trở lên)",
+            "description": "Thiết lập hiệu ứng matched geometry cho view",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".matchedGeometryEffect()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập search completion cho view (iOS 15 trở lên)",
+            "description": "Thiết lập search completion cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".searchCompletion()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập search suggestions cho view (iOS 16 trở lên)",
+            "description": "Thiết lập search suggestions cho view",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".searchSuggestions()",
             "parent": "View"
         },
         {
-            "description": "Truy cập giá trị layout của view (iOS 16 trở lên)",
+            "description": "Truy cập giá trị layout của view",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".layoutValue()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập hình dạng border cho button (iOS 15 trở lên)",
+            "description": "Thiết lập hình dạng border cho button",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".buttonBorderShape()",
@@ -1498,14 +1498,14 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập foreground style cho view (iOS 15 trở lên)",
+            "description": "Thiết lập foreground style cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".foregroundStyle()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập swipe actions cho view (iOS 15 trở lên)",
+            "description": "Thiết lập swipe actions cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".swipeActions()",
@@ -1519,21 +1519,21 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập dynamic type size cho view (iOS 15 trở lên)",
+            "description": "Thiết lập dynamic type size cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".dynamicTypeSize()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập gạch chân cho view (iOS 16 trở lên)",
+            "description": "Thiết lập gạch chân cho view",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".underline()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập gạch ngang cho view (iOS 16 trở lên)",
+            "description": "Thiết lập gạch ngang cho view",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".strikethrough()",
@@ -1554,7 +1554,7 @@
             "parent": "View"
         },
         {
-            "description": "Thêm thanh công cụ cho view (iOS 17 trở lên)",
+            "description": "Thêm thanh công cụ cho view",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".toolbar()",
@@ -1568,7 +1568,7 @@
             "parent": "View"
         },
         {
-            "description": "Hiển thị hộp thoại xác nhận (iOS 15 trở lên)",
+            "description": "Hiển thị hộp thoại xác nhận",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".confirmationDialog()",
@@ -1582,42 +1582,42 @@
             "parent": "View"
         },
         {
-            "description": "Thiết lập số cột cho ô lưới (iOS 15 trở lên)",
+            "description": "Thiết lập số cột cho ô lưới",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".gridCellColumns()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập neo cho ô lưới (iOS 16 trở lên)",
+            "description": "Thiết lập neo cho ô lưới",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".gridCellAnchor()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập căn chỉnh cho các cột trong lưới (iOS 16 trở lên)",
+            "description": "Thiết lập căn chỉnh cho các cột trong lưới",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".gridColumnAlignment()",
             "parent": "View"
         },
         {
-            "description": "Thiết lập trục không bị co giãn cho ô lưới (iOS 16 trở lên)",
+            "description": "Thiết lập trục không bị co giãn cho ô lưới",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".gridCellUnsizedAxes()",
             "parent": "View"
         },
         {
-            "description": "Thêm hiệu ứng thị giác cho view (iOS 15 trở lên)",
+            "description": "Thêm hiệu ứng thị giác cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".visualEffect()",
             "parent": "View"
         },
         {
-            "description": "Bật/tắt hiệu ứng hover (iOS 17 trở lên)",
+            "description": "Bật/tắt hiệu ứng hover",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".hoverEffectDisabled()",
@@ -1652,7 +1652,7 @@
             "parent": "View"
         },
         {
-            "description": "Trì hoãn các cử chỉ hệ thống (iOS 16 trở lên)",
+            "description": "Trì hoãn các cử chỉ hệ thống",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".defersSystemGestures()",
@@ -1680,341 +1680,341 @@
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Bắt sự kiện nhấn phím trên view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".onKeyPress()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Ẩn/Hiện view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".hidden()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập menu indicator cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".menuIndicator()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Giá trị focus hiện tại",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".focusedValue()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Giá trị focus của scene hiện tại",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".focusedSceneValue()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập style cho table view",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".tableStyle()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập control size cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".controlSize()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập style cho gauge",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".gaugeStyle()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập header cho các cột trong table view",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".tableColumnHeaders()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập chế độ hiển thị title cho toolbar",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".toolbarTitleDisplayMode()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập badge (huy hiệu) cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".badge()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập style cho control group",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".controlGroupStyle()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập phím tắt bàn phím",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".keyboardShortcut()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Bật/tắt tính năng tự sửa lỗi",
             "fullText": "",
             "ios": "13.0",
             "keyword": ".autocorrectionDisabled()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Bật/tắt tính năng tự sửa lỗi",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".disableAutocorrection()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập behavior cho dictation tìm kiếm",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".searchDictationBehavior()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập frame (khung) cho view",
             "fullText": "",
             "ios": "13.0",
             "keyword": ".frame()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập view là privacy sensitive (chứa dữ liệu nhạy cảm)",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".privacySensitive()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập presentation detents (vị trí dừng trong presentation mode)",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".presentationDetents()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập presentation drag indicator (chỉ báo kéo thả trong presentation mode)",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".presentationDragIndicator()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập presentation background interaction (tương tác nền trong presentation mode)",
             "fullText": "",
             "ios": "16.4",
             "keyword": ".presentationBackgroundInteraction()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập presentation compact adaptation (điều chỉnh cho presentation mode compact)",
             "fullText": "",
             "ios": "16.4",
             "keyword": ".presentationCompactAdaptation()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập presentation corner radius (độ tròn góc cho presentation mode)",
             "fullText": "",
             "ios": "16.4",
             "keyword": ".presentationCornerRadius()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập presentation content interaction (tương tác nội dung trong presentation mode)",
             "fullText": "",
             "ios": "16.4",
             "keyword": ".presentationContentInteraction()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập behavior cho lặp lại button",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".buttonRepeatBehavior()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập tỉ lệ scale cho text",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".textScale()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Hiển thị context menu cho view",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".contextMenu()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Quản lý di chuyển file",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".fileMover()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập text selection cho view",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".textSelection()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập khả năng focus cho view",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".focusable()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập role cho toolbar",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".toolbarRole()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Xuất file",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".fileExporter()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập chế độ hiển thị symbol",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".symbolRenderingMode()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Bật/tắt khả năng interactive dismiss",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".interactiveDismissDisabled()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập labeled content style",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".labeledContentStyle()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập interaction activity tracking tag",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".interactionActivityTrackingTag()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập presentation background",
             "fullText": "",
             "ios": "16.4",
             "keyword": ".presentationBackground()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Hành động rename (đổi tên)",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".renameAction()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thiết lập mức độ nổi bật của badge",
             "fullText": "",
             "ios": "17.0",
             "keyword": ".badgeProminence()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Thực hiện transaction (giao dịch) animation",
             "fullText": "",
             "ios": "13.0",
             "keyword": ".transaction()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Lấy object đang focus (được chọn)",
             "fullText": "",
             "ios": "13.0",
             "keyword": ".focusedObject()",
             "parent": "View"
         },
         {
-            "description": "",
+            "description": "Hiển thị trợ giúp (help) cho view",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".help()",
             "parent": "View"
-        },
-        {
-            "description": "",
+          },
+          {
+            "description": "Thiết lập background tuỳ chỉnh cho một hàng trong danh sách (List) ",
             "fullText": "",
-            "ios": "154.0",
+            "ios": "15.4",
             "keyword": ".listRowBackground()",
             "parent": "View"
-        },
-        {
-            "description": "",
+          },
+          {
+            "description": "Áp dụng label style (kiểu dáng nhãn) cụ thể cho một view ",
             "fullText": "",
             "ios": "14.0",
             "keyword": ".labelStyle()",
             "parent": "View"
-        },
-        {
-            "description": "",
+          },
+          {
+            "description": "Gắn một bộ nhận dạng cử chỉ (gesture recognizer) vào view để phát hiện thao tác kéo ",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".onDrag()",
             "parent": "View"
-        },
-        {
-            "description": "",
+          },
+          {
+            "description": "Cho phép người dùng kéo một view",
             "fullText": "",
             "ios": "16.0",
             "keyword": ".draggable()",
             "parent": "View"
-        },
-        {
-            "description": "",
+          },
+          {
+            "description": "Đặt style cho date picker (bộ chọn ngày tháng) ",
             "fullText": "",
             "ios": "15.0",
             "keyword": ".datePickerStyle()",
             "parent": "View"
-        },
-        {
-            "description": "",
+          },
+          {
+            "description": "Bật hoặc tắt khả năng tương tác của người dùng với một view ",
             "fullText": "",
             "ios": "13.0",
             "keyword": ".disabled()",
             "parent": "View"
-        }
+          }
     ]
 }
 
