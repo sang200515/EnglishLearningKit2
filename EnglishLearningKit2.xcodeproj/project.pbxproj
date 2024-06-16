@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940E76272C1E7437004529D8 /* PartOfSpeechView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E76262C1E7437004529D8 /* PartOfSpeechView.swift */; };
+		942110162C1EB3D6005D6A48 /* MultiLineHstack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942110152C1EB3D6005D6A48 /* MultiLineHstack.swift */; };
 		94FDACC32C1B3E2E00D6AB0D /* EnglishLearningKit2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDACC22C1B3E2E00D6AB0D /* EnglishLearningKit2App.swift */; };
 		94FDACC52C1B3E2E00D6AB0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDACC42C1B3E2E00D6AB0D /* ContentView.swift */; };
 		94FDACC72C1B3E3000D6AB0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FDACC62C1B3E3000D6AB0D /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		940E76262C1E7437004529D8 /* PartOfSpeechView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfSpeechView.swift; sourceTree = "<group>"; };
+		942110152C1EB3D6005D6A48 /* MultiLineHstack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLineHstack.swift; sourceTree = "<group>"; };
 		94FDACBF2C1B3E2E00D6AB0D /* EnglishLearningKit2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishLearningKit2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FDACC22C1B3E2E00D6AB0D /* EnglishLearningKit2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishLearningKit2App.swift; sourceTree = "<group>"; };
 		94FDACC42C1B3E2E00D6AB0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				94FDACD02C1B3E5000D6AB0D /* TypingModifierView.swift */,
 				94FDACD62C1B3F4A00D6AB0D /* Extension+Color.swift.swift */,
 				94FDACD22C1B3E9F00D6AB0D /* TypingModifierState.swift */,
+				940E76262C1E7437004529D8 /* PartOfSpeechView.swift */,
+				942110152C1EB3D6005D6A48 /* MultiLineHstack.swift */,
 				94FDACD42C1B3EB900D6AB0D /* modifier.json */,
 				94FDACD82C1B4C7900D6AB0D /* TestView.swift */,
 				94FDACC62C1B3E3000D6AB0D /* Assets.xcassets */,
@@ -157,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				94FDACD92C1B4C7900D6AB0D /* TestView.swift in Sources */,
+				942110162C1EB3D6005D6A48 /* MultiLineHstack.swift in Sources */,
 				94FDACD72C1B3F4A00D6AB0D /* Extension+Color.swift.swift in Sources */,
+				940E76272C1E7437004529D8 /* PartOfSpeechView.swift in Sources */,
 				94FDACD12C1B3E5000D6AB0D /* TypingModifierView.swift in Sources */,
 				94FDACC52C1B3E2E00D6AB0D /* ContentView.swift in Sources */,
 				94FDACC32C1B3E2E00D6AB0D /* EnglishLearningKit2App.swift in Sources */,

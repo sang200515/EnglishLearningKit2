@@ -16,6 +16,7 @@ final class ModifierState: ObservableObject {
     @Published var currentText = ""
     @Published var currentIndex: Int = 0
     @Published var onSuccess: Bool = false
+    @Published var onAppear: Bool = false
     @Published var onEditingSuccess: Bool = false
     @Published var listWrongKeyWord: [String] = []
     @Published var onIndex: Int = 0
@@ -55,6 +56,10 @@ final class ModifierState: ObservableObject {
         }
     }
     func textToSpeech(_ text: String){
+        guard onAppear else {
+            onAppear.toggle()
+            return
+        }
         let synthesizer = AVSpeechSynthesizer()
         let utterance = AVSpeechUtterance(string: textForSpeech)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")

@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        TabView {
+            PartOfSpeechView()
+                     .tabItem {
+                         Label("PartOfSpeech", systemImage: "list.dash")
+                     }
+
             TypingModifiersView()
-        }
-        .padding()
+                     .tabItem {
+                         Label("Typing", systemImage: "square.and.pencil")
+                     }
+             }.colorScheme(.dark)
     }
 }
 

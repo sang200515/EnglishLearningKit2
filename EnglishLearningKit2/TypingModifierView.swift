@@ -31,7 +31,7 @@ struct TypingModifiersView: View {
         .onAppear {
             state.currentText = state.displayedItem.keyword
             state.textToSpeech(state.displayedItem.keyword)
-        
+            state.onAppear = true
         }
     }
 }
@@ -122,6 +122,11 @@ extension TypingModifiersView {
                 Text(item.keyword)
                     .font(.headline)
                     .foregroundColor(.primary)
+                Text(item.ios)
+                    .font(.subheadline)
+                    .foregroundColor(.primary)
+                    .fixedSize(horizontal: false, vertical: true)
+                
                 Text(item.description)
                     .font(.subheadline)
                     .foregroundColor(.primary)
