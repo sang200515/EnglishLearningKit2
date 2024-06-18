@@ -7,16 +7,50 @@
 
 import Foundation
 
-
+import Translation
 import SwiftUI
 import NaturalLanguage
+import Combine
 struct PartOfSpeechModel {
     let word: String
     let partOfSpeech: String
     let index: Int
 }
+class TextFieldObserver : ObservableObject {
+    @Published var debouncedText = ""
+    @Published var searchText = ""
+    
+    private var subscriptions = Set<AnyCancellable>()
+    
+    init() {
+        $searchText
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] t in
+                self?.debouncedText = t
+            } )
+            .store(in: &subscriptions)
+    }
+}
+struct TextFieldWithDebounce : View {
+    @Binding var debouncedText : String
+    @StateObject private var textObserver = TextFieldObserver()
+    
+    var body: some View {
+        
+        VStack {
+            TextField("Typing some thing in English...", text: $textObserver.searchText)
+                .frame(height: 30)
+                .padding(.leading, 5)
+        }.onReceive(textObserver.$debouncedText) { (val) in
+            debouncedText = val
+        }
+    }
+}
 
 struct PartOfSpeechView: View {
+    @State private var showTranslation = false
+    @State private var showTranslationOrder = false
+    @State private var showTranslationOther = false
     @State private var text: String = ""
     @State private var feedbackMessage: String = ""
     @State private var partOfSpeechTags: [PartOfSpeechModel] = [.init(word: "", partOfSpeech: "", index: 0)]
@@ -24,15 +58,19 @@ struct PartOfSpeechView: View {
     @State private var partOfSpeechMerged: [PartOfSpeechModel] = []
     
     @FocusState private var isFocused: Bool
-    let partOfSpeechOrder: [String] = ["Noun", "Verb", "Adjective", "Adverb","Pronoun"]
-    let partOfSpeechOther: [String] = ["ProperNoun", "Determiner", "Particle", "Preposition", "Conjunction", "Interjection", "Classifier", "Idiom", "OtherWord", "OtherWhitespace", "OtherPunctuation", "Other"]
-    
+   private let partOfSpeechOrder: [String] = ["Noun", "Verb", "Adjective", "Adverb","Pronoun"]
+    private let partOfSpeechOther: [String] = ["ProperNoun", "Determiner", "Particle", "Preposition", "Conjunction", "Interjection", "Classifier", "Idiom", "OtherWord", "OtherWhitespace", "OtherPunctuation", "Other"]
+    private  let modalVerbs: [String] = [ "can", "could", "may", "might", "will", "would", "shall", "should", "must", "ought to" ]
+    private let tobeVerbs: [String] = ["am", "is", "are", "was", "were", "been", "being", "be"]
+        
     @State private var isOnDuplicate: Bool = true
+    @StateObject private var textObserver = TextFieldObserver()
+    @State private var textSize: CGSize = .zero
     var body: some View {
         ScrollView(.vertical){
             VStack(alignment: .leading) {
                 HStack {
-                    TextField("Type something in English", text: $text)
+                    TextFieldWithDebounce(debouncedText: $text)
                         .frame(height: 51)
                         .font(.title)
                         .padding()
@@ -51,27 +89,41 @@ struct PartOfSpeechView: View {
                             .padding()
                     }
                 }
-              
+                
                 .onSubmit {
                     analyzeText(text: text)
                 }
                 
-                Text(text)
-                    .foregroundColor(.white)
-                    .font(.system(size: 16))
-                
-                MultilineHStack(partOfSpeechMerged) { item in
-                    Text("\(item.word) ")
-                        .foregroundColor(colorForPartOfSpeech(item.partOfSpeech))
+                if #available(iOS 17.4, *) {
+                    Text(text)
+                        .foregroundColor(.white)
                         .font(.system(size: 16))
+                        .onTapGesture {
+                            showTranslation.toggle()
+                        }
+                        .translationPresentation(isPresented: $showTranslation,text: text)
+                        .readSize { size in
+                            self.textSize = size
+                        }
+                } else {
+                    // Fallback on earlier versions
                 }
                 
+                Group {
+                    MultilineHStack(partOfSpeechMerged) { item in
+                        Text("\(item.word) ")
+                            .foregroundColor(colorForPartOfSpeech(item.partOfSpeech))
+                            .font(.system(size: 16))
+                    }
+                }
+                .frame(height: textSize.height)
+                
                 partOfSpeechToggle
-                    .padding(.top, 24)
+                    .padding(.top, 8)
                 listPartOfSpeech
                 listParthOfSpeechOther
                 
-
+                
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -99,26 +151,40 @@ struct PartOfSpeechView: View {
     private var listPartOfSpeech: some View {
         LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())], spacing: 8) {
             ForEach(partOfSpeechOrder, id: \.self) { posTag in
-                VStack(spacing: 5) {
-                    Text("\(posTag)")
-                        .foregroundColor(colorForPartOfSpeech(posTag))
-                        .font(.headline) + Text(displayCountString(posTag: posTag)).font(.headline)
-                    ScrollView {
-                        LazyVStack(spacing: 5) {
-                            ForEach(Array(partOfSpeechTags.filter { $0.partOfSpeech == posTag }.enumerated()), id: \.offset) { index, tag in
-                                HStack {
-                                    Text("• \(tag.word)")
-                                        .foregroundColor(colorForPartOfSpeech(tag.partOfSpeech))
-                                    Spacer()
-                                    Text(" • \(tag.index)")
+                let filteredItems = partOfSpeechTags.filter { $0.partOfSpeech == posTag }
+                if !filteredItems.isEmpty {
+                    VStack(spacing: 5) {
+                        Text("\(posTag)")
+                            .foregroundColor(colorForPartOfSpeech(posTag))
+                            .font(.headline) + Text(displayCountString(posTag: posTag)).font(.headline)
+                        ScrollView {
+                            LazyVStack(spacing: 5) {
+                                ForEach(Array(filteredItems.enumerated()), id: \.offset) { index, tag in
+                                    HStack {
+                                        let modalVerbString = modalVerbs.contains { $0.lowercased() == tag.word.lowercased() } ? " (m)" : ""
+                                        let tobeVerbString = tobeVerbs.contains { $0.lowercased() == tag.word.lowercased() } ? " (be)" : ""
+                                        
+                                        if #available(iOS 17.4, *) {
+                                            Text("• \(tag.word)\(modalVerbString)\(tobeVerbString)")
+                                                .foregroundColor(colorForPartOfSpeech(tag.partOfSpeech))
+                                                .translationPresentation(isPresented: $showTranslation,text: text)
+                                        } else {
+                                            // Fallback on earlier versions
+                                        }
+                                        Spacer()
+                                        Text(" • \(tag.index)")
+                                    }
+                                    .onTapGesture {
+                                        showTranslationOrder.toggle()
+                                    }
                                 }
                             }
                         }
                     }
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
                 }
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(10)
             }
         }
     }
@@ -131,68 +197,80 @@ struct PartOfSpeechView: View {
     private var listParthOfSpeechOther: some View {
         LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())], spacing: 8) {
             ForEach(partOfSpeechOther, id: \.self) { posTag in
-                VStack(spacing: 5) {
-                    Text("\(posTag)")
-                        .foregroundColor(colorForPartOfSpeech(posTag))
-                        .font(.headline) + Text(displayCountStringOther(posTag: posTag)).font(.headline)
-                    ScrollView {
-                        LazyVStack(spacing: 5) {
-                            ForEach(Array(partOfSpeechTagsOther.filter { $0.partOfSpeech == posTag }.enumerated()), id: \.offset) { index, tag in
-                                HStack { 
-                                    Text("• \(tag.word)")
-                                        .foregroundColor(colorForPartOfSpeech(tag.partOfSpeech))
-                                    Spacer()
-                                    Text(" • \(tag.index)")
+                let filteredItems = partOfSpeechTagsOther.filter { $0.partOfSpeech == posTag }
+                if !filteredItems.isEmpty {
+                    VStack(spacing: 5) {
+                        Text("\(posTag)")
+                            .foregroundColor(colorForPartOfSpeech(posTag))
+                            .font(.headline) + Text(displayCountStringOther(posTag: posTag)).font(.headline)
+                        ScrollView {
+                            LazyVStack(spacing: 5) {
+                                ForEach(Array(filteredItems.enumerated()), id: \.offset) { index, tag in
+                                    HStack {
+                                        let text = "• \(tag.word)"
+                                        if #available(iOS 17.4, *) {
+                                            Text(text)
+                                                .foregroundColor(colorForPartOfSpeech(tag.partOfSpeech))
+                                                .translationPresentation(isPresented: $showTranslationOther, text: text)
+                                        }
+                                        Spacer()
+                                        Text(" • \(tag.index)")
+                                    }
+                                    .onTapGesture {
+                                        showTranslationOther.toggle()
+                                    }
                                 }
-                               
                             }
                         }
                     }
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(10)
+                } else {
+                    EmptyView()
                 }
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(10)
             }
         }
-        
     }
     private func analyzeText(text: String) {
-        partOfSpeechTags.removeAll()
-        partOfSpeechTagsOther.removeAll()
-        partOfSpeechMerged.removeAll()
-        let tagger = NLTagger(tagSchemes: [.lexicalClass])
-        tagger.string = text
-        
-        let options: NLTagger.Options = [.omitWhitespace, .omitPunctuation]
-        var counter: Int = 0
-        tagger.enumerateTags(in: text.startIndex..<text.endIndex, unit: .word, scheme: .lexicalClass, options: options) { tag, tokenRange in
-            counter += 1
-            if let tag = tag {
-                let word = String(text[tokenRange])
-                let partOfSpeech = tag.rawValue
-                let newEntry = (word: word, partOfSpeech: partOfSpeech)
-                self.partOfSpeechMerged.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
-                if partOfSpeechOrder.contains(partOfSpeech) {
-                    if isOnDuplicate {
-                        if !self.partOfSpeechTags.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+        withAnimation {
+            partOfSpeechTags.removeAll()
+            partOfSpeechTagsOther.removeAll()
+            partOfSpeechMerged.removeAll()
+            let tagger = NLTagger(tagSchemes: [.lexicalClass])
+            tagger.string = text
+            
+            let options: NLTagger.Options = [.omitWhitespace, .omitPunctuation]
+            var counter: Int = 0
+            tagger.enumerateTags(in: text.startIndex..<text.endIndex, unit: .word, scheme: .lexicalClass, options: options) { tag, tokenRange in
+                counter += 1
+                if let tag = tag {
+                    let word = String(text[tokenRange])
+                    let partOfSpeech = tag.rawValue
+                    let newEntry = (word: word, partOfSpeech: partOfSpeech)
+                    self.partOfSpeechMerged.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
+                    if partOfSpeechOrder.contains(partOfSpeech) {
+                        if isOnDuplicate {
+                            if !self.partOfSpeechTags.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+                                self.partOfSpeechTags.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
+                            }
+                            
+                        } else {
                             self.partOfSpeechTags.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
+                            
                         }
-                        
                     } else {
-                        self.partOfSpeechTags.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
-                        
-                    }
-                } else {
-                    if isOnDuplicate {
-                        if !self.partOfSpeechTagsOther.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+                        if isOnDuplicate {
+                            if !self.partOfSpeechTagsOther.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+                                self.partOfSpeechTagsOther.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
+                            }
+                        }else {
                             self.partOfSpeechTagsOther.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
                         }
-                    }else {
-                        self.partOfSpeechTagsOther.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
                     }
                 }
+                return true
             }
-            return true
         }
         
         // Sort partOfSpeechTags based on lexical classes: Noun > Verb >  Adjective > Adverb > Pronoun
