@@ -75,13 +75,13 @@ struct PartOfSpeechView: View {
                         .font(.title)
                         .padding()
                         .onChange(of: text) { oldValue, newValue in
-                            analyzeText(text: newValue)
+                            analyzeText(inputText: newValue)
                         }
                     
                     Button(action: {
                         if let clipboardText = UIPasteboard.general.string {
                             text = clipboardText
-                            analyzeText(text: text)
+                            analyzeText(inputText: text)
                         }
                     }) {
                         Image(systemName: "doc.on.clipboard")
@@ -91,7 +91,7 @@ struct PartOfSpeechView: View {
                 }
                 
                 .onSubmit {
-                    analyzeText(text: text)
+                    analyzeText(inputText: text)
                 }
                 
                 if #available(iOS 17.4, *) {
@@ -136,7 +136,7 @@ struct PartOfSpeechView: View {
             Toggle(isOn: $isOnDuplicate, label: {
                 Text("")
             }).onChange(of: isOnDuplicate) { _,newValue in
-                analyzeText(text: text)
+                analyzeText(inputText: text)
             }
             .frame(width: 45)
             Spacer()
@@ -163,20 +163,14 @@ struct PartOfSpeechView: View {
                                     HStack {
                                         let modalVerbString = modalVerbs.contains { $0.lowercased() == tag.word.lowercased() } ? " (m)" : ""
                                         let tobeVerbString = tobeVerbs.contains { $0.lowercased() == tag.word.lowercased() } ? " (be)" : ""
-                                        
-                                        if #available(iOS 17.4, *) {
-                                            Text("• \(tag.word)\(modalVerbString)\(tobeVerbString)")
-                                                .foregroundColor(colorForPartOfSpeech(tag.partOfSpeech))
-                                                .translationPresentation(isPresented: $showTranslation,text: text)
-                                        } else {
-                                            // Fallback on earlier versions
-                                        }
+                                        Text("• \(tag.word)\(modalVerbString)\(tobeVerbString)")
+                                            .foregroundColor(colorForPartOfSpeech(tag.partOfSpeech))
                                         Spacer()
                                         Text(" • \(tag.index)")
                                     }
-                                    .onTapGesture {
-                                        showTranslationOrder.toggle()
-                                    }
+//                                    .onTapGesture {
+//                                        showTranslationOrder.toggle()
+//                                    }
                                 }
                             }
                         }
@@ -211,14 +205,14 @@ struct PartOfSpeechView: View {
                                         if #available(iOS 17.4, *) {
                                             Text(text)
                                                 .foregroundColor(colorForPartOfSpeech(tag.partOfSpeech))
-                                                .translationPresentation(isPresented: $showTranslationOther, text: text)
+//                                                .translationPresentation(isPresented: $showTranslationOther, text: text)
                                         }
                                         Spacer()
                                         Text(" • \(tag.index)")
                                     }
-                                    .onTapGesture {
-                                        showTranslationOther.toggle()
-                                    }
+//                                    .onTapGesture {
+//                                        showTranslationOther.toggle()
+//                                    }
                                 }
                             }
                         }
@@ -232,20 +226,20 @@ struct PartOfSpeechView: View {
             }
         }
     }
-    private func analyzeText(text: String) {
+    private func analyzeText(inputText: String) {
         withAnimation {
             partOfSpeechTags.removeAll()
             partOfSpeechTagsOther.removeAll()
             partOfSpeechMerged.removeAll()
             let tagger = NLTagger(tagSchemes: [.lexicalClass])
-            tagger.string = text
+            tagger.string = inputText
             
             let options: NLTagger.Options = [.omitWhitespace, .omitPunctuation]
             var counter: Int = 0
-            tagger.enumerateTags(in: text.startIndex..<text.endIndex, unit: .word, scheme: .lexicalClass, options: options) { tag, tokenRange in
+            tagger.enumerateTags(in: inputText.startIndex..<inputText.endIndex, unit: .word, scheme: .lexicalClass, options: options) { tag, tokenRange in
                 counter += 1
-                if let tag = tag {
-                    let word = String(text[tokenRange])
+                if let tag {
+                    let word = String(inputText[tokenRange])
                     let partOfSpeech = tag.rawValue
                     let newEntry = (word: word, partOfSpeech: partOfSpeech)
                     self.partOfSpeechMerged.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
