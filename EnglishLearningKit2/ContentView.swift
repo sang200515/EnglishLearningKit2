@@ -11,15 +11,20 @@ struct ContentView: View {
     var body: some View {
         TabView {
             PartOfSpeechView()
-                     .tabItem {
-                         Label("PartOfSpeech", systemImage: "list.dash")
-                     }
-
+                .tabItem {
+                    Label("PartOfSpeech", systemImage: "list.dash")
+                }
+            
             TypingModifiersView()
-                     .tabItem {
-                         Label("Typing", systemImage: "square.and.pencil")
-                     }
-             }.colorScheme(.dark)
+                .tabItem {
+                    Label("Typing", systemImage: "square.and.pencil")
+                }
+            TypingModifiersView()
+                .tabItem {
+                    Label("Cache", systemImage: "square.and.pencil")
+                }
+        }
+        .colorScheme(.dark)
     }
 }
 

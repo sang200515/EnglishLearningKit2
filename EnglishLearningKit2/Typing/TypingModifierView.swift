@@ -59,15 +59,13 @@ private extension TypingModifiersView {
     
     var searchTextField: some View {
         TextField(state.displayedItem.keyword, text: $state.searchText)
-            .autocorrectionDisabled(true)
+//            .autocorrectionDisabled(true)
             .font(.system(size: 50, weight: .bold))
             .padding()
             .frame(width: 650, height: 60)
-            .textInputAutocapitalization(.never)
             .focused($isFocused)
             .onChange(of: state.searchText) { newValue in
-                
-                if !SharingInputListString.listString.isEmpty {
+                if !SharingInputListString.listNoun.isEmpty {
                     state.validateSuccessForPartOfSpeech()
                 } else {
                     state.validateSuccessForTyping()

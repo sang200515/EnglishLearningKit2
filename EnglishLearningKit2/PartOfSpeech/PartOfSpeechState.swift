@@ -32,7 +32,13 @@ final class PartOfSpeechState: ObservableObject {
         let noundCountable = Nound.listUncountable.contains { $0.lowercased() == text.lowercased() } ? " (u)" : ""
         return "• \(text)\(modalVerbString)\(tobeVerbString)\(noundCountable)"
     }
-    
+    func saveCache(){
+        SharingInputListString.listNoun = partOfSpeechTags.filter { $0.partOfSpeech == "Noun" }.map { $0.word }
+        SharingInputListString.listVerb = partOfSpeechTags.filter { $0.partOfSpeech == "Verb" }.map { $0.word }
+        SharingInputListString.listAdjective = partOfSpeechTags.filter { $0.partOfSpeech == "Adjective" }.map { $0.word }
+        SharingInputListString.listAdverb = partOfSpeechTags.filter { $0.partOfSpeech == "Adverb" }.map { $0.word }
+        SharingInputListString.listPronoun = partOfSpeechTags.filter { $0.partOfSpeech == "Pronoun" }.map { $0.word }
+    }
     var columns: [GridItem] {
         [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
     }
@@ -57,7 +63,7 @@ final class PartOfSpeechState: ObservableObject {
                     partOfSpeechMerged.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
                     if listMainPartOfSpeech.contains(partOfSpeech) {
                         if isOnDuplicate {
-                            if !partOfSpeechTags.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+                            if !partOfSpeechTags.contains(where: { $0.word.lowercased() == newEntry.word.lowercased() && $0.partOfSpeech == newEntry.partOfSpeech }) {
                                 partOfSpeechTags.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
                             }
                             
@@ -67,7 +73,7 @@ final class PartOfSpeechState: ObservableObject {
                         }
                     } else {
                         if isOnDuplicate {
-                            if !partOfSpeechTagsOther.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+                            if !partOfSpeechTagsOther.contains(where: { $0.word.lowercased() == newEntry.word.lowercased() && $0.partOfSpeech.lowercased() == newEntry.partOfSpeech.lowercased() }) {
                                 partOfSpeechTagsOther.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
                             }
                         }else {

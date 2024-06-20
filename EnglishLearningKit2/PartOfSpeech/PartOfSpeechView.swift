@@ -15,6 +15,7 @@ struct PartOfSpeechView: View {
     @ObservedObject private var state = PartOfSpeechState()
     @StateObject private var textObserver = TextFieldObserver()
     
+   
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading) {
@@ -30,7 +31,9 @@ struct PartOfSpeechView: View {
         .colorScheme(.dark)
     }
     
+    @ViewBuilder
     private var inputTextFieldView: some View {
+#if os(iOS)
         HStack {
             TextFieldWithDebounce(debouncedText: $state.typingText)
                 .frame(height: 51)
@@ -53,11 +56,22 @@ struct PartOfSpeechView: View {
                     .padding()
             }
         }
+#else
+        TextFieldWithDebounce(debouncedText: $state.typingText)
+            .frame(height: 51)
+            .font(.title)
+            .padding()
+            .onChange(of: state.typingText) { oldValue, newValue in
+                state.analyzeText(inputText: newValue)
+            }.onSubmit {
+                state.analyzeText(inputText: state.typingText)
+            }
+#endif
     }
-    
     @ViewBuilder
     private var inputCopyTextFieldView: some View {
         if #available(iOS 17.4, *) {
+#if os(iOS)
             Text(state.typingText)
                 .foregroundColor(.white)
                 .font(.system(size: 16))
@@ -68,6 +82,11 @@ struct PartOfSpeechView: View {
                 .readSize { size in
                     state.textSize = size
                 }
+#else
+            Text(state.typingText)
+                .foregroundColor(.white)
+                .font(.system(size: 16))
+#endif
         } else {
             Text(state.typingText)
                 .foregroundColor(.white)
@@ -117,6 +136,8 @@ struct PartOfSpeechView: View {
                         }.onTapGesture {
                             state.isOnDuplicate = true
                             SharingInputListString.listString = state.partOfSpeechTags.filter { $0.partOfSpeech == posTag }.map { $0.word }
+                            state.saveCache()
+                            postag = posTag
                         }
                             
                         ScrollView {

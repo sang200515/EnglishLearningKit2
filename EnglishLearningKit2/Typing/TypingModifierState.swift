@@ -59,12 +59,7 @@ final class ModifierState: ObservableObject {
     }
     
     var validateColor: Color {
-        print("searchText.lowercased() \(searchText.lowercased())")
-        print(String(displayedItem.keyword.lowercased().prefix(searchText.lowercased().count)))
-        print(searchText.lowercased() == String(displayedItem.keyword.lowercased().prefix(searchText.lowercased().count)))
-        print(searchText.lowercased() == String(displayedItem.keyword.lowercased().prefix(searchText.lowercased().count)) ? "blue" : ".red")
         return searchText.lowercased() == String(displayedItem.keyword.lowercased().prefix(searchText.lowercased().count)) ? Color.gray.opacity(0.2) : .red
-        
     }
     
     func validateSuccessForTyping(){
@@ -99,7 +94,13 @@ final class ModifierState: ObservableObject {
     }
     
     var textForSpeech: String {
-        let str = String(displayedItem.keyword.dropFirst(1).dropLast(2))
+        var str: String {
+            if !SharingInputListString.listNoun.isEmpty{
+                return String(displayedItem.keyword)
+            } else {
+               return String(displayedItem.keyword.dropFirst(1).dropLast(2))
+            }
+        }
         var words: [String] = []
         var currentWord = ""
         

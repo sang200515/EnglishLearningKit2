@@ -16,6 +16,8 @@
 		948B92F92C23227B00D0BA58 /* PartOfSpeechModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B92F82C23227B00D0BA58 /* PartOfSpeechModel.swift */; };
 		948B92FC2C232BCA00D0BA58 /* Noun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B92FB2C232BCA00D0BA58 /* Noun.swift */; };
 		948B92FE2C232D1300D0BA58 /* SharingInputListString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B92FD2C232D1300D0BA58 /* SharingInputListString.swift */; };
+		94EDB45B2C248E73007592F4 /* FromCacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDB45A2C248E73007592F4 /* FromCacheView.swift */; };
+		94EDB45D2C248E7A007592F4 /* FromCacheState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDB45C2C248E7A007592F4 /* FromCacheState.swift */; };
 		94FDACC32C1B3E2E00D6AB0D /* EnglishLearningKit2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDACC22C1B3E2E00D6AB0D /* EnglishLearningKit2App.swift */; };
 		94FDACC52C1B3E2E00D6AB0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FDACC42C1B3E2E00D6AB0D /* ContentView.swift */; };
 		94FDACC72C1B3E3000D6AB0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FDACC62C1B3E3000D6AB0D /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		948B92F82C23227B00D0BA58 /* PartOfSpeechModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfSpeechModel.swift; sourceTree = "<group>"; };
 		948B92FB2C232BCA00D0BA58 /* Noun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noun.swift; sourceTree = "<group>"; };
 		948B92FD2C232D1300D0BA58 /* SharingInputListString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingInputListString.swift; sourceTree = "<group>"; };
+		94EDB45A2C248E73007592F4 /* FromCacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromCacheView.swift; sourceTree = "<group>"; };
+		94EDB45C2C248E7A007592F4 /* FromCacheState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromCacheState.swift; sourceTree = "<group>"; };
 		94FDACBF2C1B3E2E00D6AB0D /* EnglishLearningKit2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishLearningKit2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FDACC22C1B3E2E00D6AB0D /* EnglishLearningKit2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishLearningKit2App.swift; sourceTree = "<group>"; };
 		94FDACC42C1B3E2E00D6AB0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		94EDB4592C248E05007592F4 /* FromCache */ = {
+			isa = PBXGroup;
+			children = (
+				94EDB45A2C248E73007592F4 /* FromCacheView.swift */,
+				94EDB45C2C248E7A007592F4 /* FromCacheState.swift */,
+			);
+			path = FromCache;
+			sourceTree = "<group>";
+		};
 		94FDACB62C1B3E2D00D6AB0D = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 				948B92EF2C2318CC00D0BA58 /* Extension */,
 				948B92EE2C2318C400D0BA58 /* Typing */,
 				948B92ED2C2318B700D0BA58 /* PartOfSpeech */,
+				94EDB4592C248E05007592F4 /* FromCache */,
 				94FDACD42C1B3EB900D6AB0D /* modifier.json */,
 				94FDACC42C1B3E2E00D6AB0D /* ContentView.swift */,
 				94FDACC22C1B3E2E00D6AB0D /* EnglishLearningKit2App.swift */,
@@ -216,10 +230,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				94FDACD92C1B4C7900D6AB0D /* TestView.swift in Sources */,
+				94EDB45B2C248E73007592F4 /* FromCacheView.swift in Sources */,
 				942110162C1EB3D6005D6A48 /* MultiLineHstack.swift in Sources */,
 				94FDACD72C1B3F4A00D6AB0D /* Extension+Color.swift.swift in Sources */,
 				940E76272C1E7437004529D8 /* PartOfSpeechView.swift in Sources */,
 				94FDACD12C1B3E5000D6AB0D /* TypingModifierView.swift in Sources */,
+				94EDB45D2C248E7A007592F4 /* FromCacheState.swift in Sources */,
 				948B92FE2C232D1300D0BA58 /* SharingInputListString.swift in Sources */,
 				94FDACC52C1B3E2E00D6AB0D /* ContentView.swift in Sources */,
 				948B92F92C23227B00D0BA58 /* PartOfSpeechModel.swift in Sources */,

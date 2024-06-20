@@ -9,4 +9,9 @@ import Foundation
 
 class SharingInputListString {
     static var listString: [String] = []
+    static var listNoun: [String] = []
+    static var listVerb: [String] = []
+    static var listAdjective: [String] = []
+    static var listAdverb: [String] = []
+    static var listPronoun: [String] = []
 }
