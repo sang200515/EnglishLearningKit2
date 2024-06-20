@@ -33,11 +33,11 @@ final class PartOfSpeechState: ObservableObject {
         return "• \(text)\(modalVerbString)\(tobeVerbString)\(noundCountable)"
     }
     func saveCache(){
-        SharingInputListString.listNoun = partOfSpeechTags.filter { $0.partOfSpeech == "Noun" }.map { $0.word }
-        SharingInputListString.listVerb = partOfSpeechTags.filter { $0.partOfSpeech == "Verb" }.map { $0.word }
-        SharingInputListString.listAdjective = partOfSpeechTags.filter { $0.partOfSpeech == "Adjective" }.map { $0.word }
-        SharingInputListString.listAdverb = partOfSpeechTags.filter { $0.partOfSpeech == "Adverb" }.map { $0.word }
-        SharingInputListString.listPronoun = partOfSpeechTags.filter { $0.partOfSpeech == "Pronoun" }.map { $0.word }
+        SharingInputListString.listNoun.append(contentsOf: partOfSpeechTags.filter { $0.partOfSpeech == "Noun" }.map { $0.word })
+        SharingInputListString.listVerb.append(contentsOf: partOfSpeechTags.filter { $0.partOfSpeech == "Verb" }.map { $0.word })
+        SharingInputListString.listAdjective.append(contentsOf: partOfSpeechTags.filter { $0.partOfSpeech == "Adjective" }.map { $0.word })
+        SharingInputListString.listAdverb.append(contentsOf: partOfSpeechTags.filter { $0.partOfSpeech == "Adverb" }.map { $0.word })
+        SharingInputListString.listPronoun.append(contentsOf: partOfSpeechTags.filter { $0.partOfSpeech == "Pronoun" }.map { $0.word })
     }
     var columns: [GridItem] {
         [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
