@@ -110,16 +110,20 @@ struct PartOfSpeechView: View {
                 let filteredItems = state.partOfSpeechTags.filter { $0.partOfSpeech == posTag }
                 if !filteredItems.isEmpty {
                     VStack(spacing: 5) {
-                        Text("\(posTag)")
-                            .foregroundColor(state.colorForPartOfSpeech(posTag))
-                            .font(.headline) + Text(state.displayCountString(posTag: posTag)).font(.headline)
+                        Group { 
+                            Text("\(posTag)")
+                                .foregroundColor(state.colorForPartOfSpeech(posTag))
+                                .font(.headline) + Text(state.displayCountString(posTag: posTag)).font(.headline)
+                        }.onTapGesture {
+                            state.isOnDuplicate = true
+                            SharingInputListString.listString = state.partOfSpeechTags.filter { $0.partOfSpeech == posTag }.map { $0.word }
+                        }
+                            
                         ScrollView {
                             LazyVStack(spacing: 5) {
                                 ForEach(Array(filteredItems.enumerated()), id: \.offset) { index, tag in
                                     HStack {
-                                        let modalVerbString = DataSource.Verb.modalVerbs.contains { $0.lowercased() == tag.word.lowercased() } ? " (m)" : ""
-                                        let tobeVerbString = DataSource.Verb.tobeVerbs.contains { $0.lowercased() == tag.word.lowercased() } ? " (be)" : ""
-                                        Text("• \(tag.word)\(modalVerbString)\(tobeVerbString)")
+                                        Text(state.displayMainOptionString(text: tag.word))
                                             .foregroundColor(state.colorForPartOfSpeech(tag.partOfSpeech))
                                         Spacer()
                                         Text(" • \(tag.index)")

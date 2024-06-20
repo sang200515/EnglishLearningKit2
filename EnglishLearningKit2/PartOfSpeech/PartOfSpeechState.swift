@@ -26,6 +26,13 @@ final class PartOfSpeechState: ObservableObject {
         self.typingText = typingText
     }
     
+    func displayMainOptionString(text: String) -> String {
+        let modalVerbString = Verb.modalVerbs.contains { $0.lowercased() == text.lowercased() } ? " (m)" : ""
+        let tobeVerbString = Verb.tobeVerbs.contains { $0.lowercased() == text.lowercased() } ? " (be)" : ""
+        let noundCountable = Nound.listUncountable.contains { $0.lowercased() == text.lowercased() } ? " (u)" : ""
+        return "• \(text)\(modalVerbString)\(tobeVerbString)\(noundCountable)"
+    }
+    
     var columns: [GridItem] {
         [GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
     }
@@ -35,44 +42,44 @@ final class PartOfSpeechState: ObservableObject {
             partOfSpeechTags.removeAll()
             partOfSpeechTagsOther.removeAll()
             partOfSpeechMerged.removeAll()
-        }
-        
-        let tagger = NLTagger(tagSchemes: [.lexicalClass])
-        tagger.string = inputText
-        
-        let options: NLTagger.Options = [.omitWhitespace, .omitPunctuation]
-        var counter: Int = 0
-        tagger.enumerateTags(in: inputText.startIndex..<inputText.endIndex, unit: .word, scheme: .lexicalClass, options: options) { tag, tokenRange in
-            counter += 1
-            if let tag {
-                let word = String(inputText[tokenRange])
-                let partOfSpeech = tag.rawValue
-                let newEntry = (word: word, partOfSpeech: partOfSpeech)
-                partOfSpeechMerged.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
-                if listMainPartOfSpeech.contains(partOfSpeech) {
-                    if isOnDuplicate {
-                        if !partOfSpeechTags.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+            
+            let tagger = NLTagger(tagSchemes: [.lexicalClass])
+            tagger.string = inputText
+            
+            let options: NLTagger.Options = [.omitWhitespace, .omitPunctuation]
+            var counter: Int = 0
+            tagger.enumerateTags(in: inputText.startIndex..<inputText.endIndex, unit: .word, scheme: .lexicalClass, options: options) { tag, tokenRange in
+                counter += 1
+                if let tag {
+                    let word = String(inputText[tokenRange])
+                    let partOfSpeech = tag.rawValue
+                    let newEntry = (word: word, partOfSpeech: partOfSpeech)
+                    partOfSpeechMerged.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
+                    if listMainPartOfSpeech.contains(partOfSpeech) {
+                        if isOnDuplicate {
+                            if !partOfSpeechTags.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+                                partOfSpeechTags.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
+                            }
+                            
+                        } else {
                             partOfSpeechTags.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
+                            
                         }
-                        
                     } else {
-                        partOfSpeechTags.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
-                        
-                    }
-                } else {
-                    if isOnDuplicate {
-                        if !partOfSpeechTagsOther.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+                        if isOnDuplicate {
+                            if !partOfSpeechTagsOther.contains(where: { $0.word == newEntry.word && $0.partOfSpeech == newEntry.partOfSpeech }) {
+                                partOfSpeechTagsOther.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
+                            }
+                        }else {
                             partOfSpeechTagsOther.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
                         }
-                    }else {
-                        partOfSpeechTagsOther.append(.init(word: newEntry.word, partOfSpeech: newEntry.partOfSpeech, index: counter))
                     }
                 }
+                return true
             }
-            return true
-        }
-        partOfSpeechTags.sort { (first, second) -> Bool in
-            return sortOrder(for: first.partOfSpeech) < sortOrder(for: second.partOfSpeech)
+            partOfSpeechTags.sort { (first, second) -> Bool in
+                return sortOrder(for: first.partOfSpeech) < sortOrder(for: second.partOfSpeech)
+            }
         }
     }
     

@@ -20,9 +20,8 @@ struct TypingModifiersView: View {
             contentView
             searchTextField
                 .padding()
-                .background(Color.gray.opacity(0.2))
+                .background(state.validateColor)
                 .cornerRadius(10)
-                .padding(.horizontal)
         }
         .frame(maxWidth: .infinity)
         .padding()
@@ -30,6 +29,7 @@ struct TypingModifiersView: View {
         .preferredColorScheme(.dark)
         .onAppear {
             state.currentText = state.displayedItem.keyword
+            state.update()
             state.textToSpeech(state.displayedItem.keyword)
             state.onAppear = true
         }
@@ -62,13 +62,16 @@ private extension TypingModifiersView {
             .autocorrectionDisabled(true)
             .font(.system(size: 50, weight: .bold))
             .padding()
-            .foregroundColor(state.onEditingSuccess ? .blue : .red)
             .frame(width: 650, height: 60)
             .textInputAutocapitalization(.never)
             .focused($isFocused)
             .onChange(of: state.searchText) { newValue in
-                state.onSuccess = newValue.lowercased() == String(state.displayedItem.keyword.lowercased().dropFirst(1).dropLast(2))
-                state.onEditingSuccess = newValue.lowercased() == String(state.displayedItem.keyword.lowercased().dropFirst(1).dropLast(2)).prefix(newValue.count).lowercased()
+                
+                if !SharingInputListString.listString.isEmpty {
+                    state.validateSuccessForPartOfSpeech()
+                } else {
+                    state.validateSuccessForTyping()
+                }
                 if state.onSuccess {
                     state.removeRandomItem()
                     state.searchText = ""

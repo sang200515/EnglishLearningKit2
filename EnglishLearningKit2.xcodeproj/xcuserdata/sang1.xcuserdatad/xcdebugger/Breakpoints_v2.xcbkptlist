@@ -7,62 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9415BA5D-4854-45B4-9630-1967D7BB1260"
-            shouldBeEnabled = "No"
+            uuid = "6EA6398F-DEFD-4083-BC30-C7BFCD768D50"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EnglishLearningKit2/TypingModifierState.swift"
+            filePath = "EnglishLearningKit2/Typing/TypingModifierState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "removeRandomItem()"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "loadModifiersFromJSON()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "040B9347-1B76-4CE2-B810-EDB0074FF62F"
-            shouldBeEnabled = "Yes"
+            uuid = "14D57D3C-A47B-4FA3-B334-89A39F873B2E"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            symbolName = ""
-            moduleName = "">
-            <Locations>
-            </Locations>
+            filePath = "EnglishLearningKit2/Typing/TypingModifierState.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "validateColor"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7849C395-91E7-4ECE-9EE4-BB7EC047CAC0"
+            uuid = "E6FF1084-FC59-4679-9882-46EDD6C73BA4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EnglishLearningKit2/TypingModifierView.swift"
+            filePath = "EnglishLearningKit2/Typing/TypingModifierState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "TypingModifiersView"
-            landmarkType = "14">
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "init()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BDFE9995-0E29-488F-8E98-A2C554312679"
-            shouldBeEnabled = "Yes"
+            uuid = "4C0C3810-5AEA-496F-B68C-A51C121FE10F"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EnglishLearningKit2/TypingModifierView.swift"
+            filePath = "EnglishLearningKit2/Typing/TypingModifierState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "TypingModifiersView"
-            landmarkType = "14">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

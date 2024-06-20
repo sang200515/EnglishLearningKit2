@@ -17,20 +17,30 @@ final class ModifierState: ObservableObject {
     @Published var currentIndex: Int = 0
     @Published var onSuccess: Bool = false
     @Published var onAppear: Bool = false
-    @Published var onEditingSuccess: Bool = false
     @Published var listWrongKeyWord: [String] = []
     @Published var onIndex: Int = 0
     @Published var shouldSpeak = false
     @Published private(set) var ipaPronunciation: String?
-    //    var ipaString: String {
-    //        let synthesizer = AVSpeechSynthesizer()
-    //        let utterance = AVSpeechUtterance(string: textForSpeech)
-    //
-    //    }
     init() {
-        loadModifiersFromJSON()
+        if SharingInputListString.listString.isEmpty {
+            loadModifiersFromJSON()
+        }
     }
     
+    func update(){
+        items = SharingInputListString.listString.map {
+            .init(
+                description: "",
+                fullText: "",
+                keyword: $0,
+                parent: "",
+                ios: ""
+            )
+        }
+        if let item = items.first {
+            displayedItem = item
+        }
+    }
     func removeRandomItem() {
         guard !items.isEmpty else { return }
         items.shuffle()
@@ -46,6 +56,23 @@ final class ModifierState: ObservableObject {
                 itemsDisplayed.append(displayedItem)
             }
         }
+    }
+    
+    var validateColor: Color {
+        print("searchText.lowercased() \(searchText.lowercased())")
+        print(String(displayedItem.keyword.lowercased().prefix(searchText.lowercased().count)))
+        print(searchText.lowercased() == String(displayedItem.keyword.lowercased().prefix(searchText.lowercased().count)))
+        print(searchText.lowercased() == String(displayedItem.keyword.lowercased().prefix(searchText.lowercased().count)) ? "blue" : ".red")
+        return searchText.lowercased() == String(displayedItem.keyword.lowercased().prefix(searchText.lowercased().count)) ? Color.gray.opacity(0.2) : .red
+        
+    }
+    
+    func validateSuccessForTyping(){
+        onSuccess = searchText.lowercased() == String(displayedItem.keyword.lowercased().dropFirst(1).dropLast(2)).lowercased()
+    }
+    
+    func validateSuccessForPartOfSpeech(){
+        onSuccess = searchText.lowercased() == String(displayedItem.keyword.lowercased())
     }
     
     @Published var onCompleted: Bool = false {
