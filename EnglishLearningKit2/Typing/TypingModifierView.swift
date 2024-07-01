@@ -45,6 +45,7 @@ private extension TypingModifiersView {
     }
     
     var contentView: some View {
+        // if user use keyboard command + 1 it will be show / hide this vstack
         VStack {
             Text(state.displayedItem.keyword)
                 .font(.system(size: 50))
@@ -58,7 +59,7 @@ private extension TypingModifiersView {
     }
     
     var searchTextField: some View {
-        TextField(state.displayedItem.keyword, text: $state.searchText)
+        TextField("", text: $state.searchText)
 //            .autocorrectionDisabled(true)
             .font(.system(size: 50, weight: .bold))
             .padding()

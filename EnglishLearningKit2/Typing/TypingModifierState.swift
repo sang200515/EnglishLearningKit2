@@ -96,7 +96,7 @@ final class ModifierState: ObservableObject {
     var textForSpeech: String {
         var str: String {
             if !SharingInputListString.listNoun.isEmpty{
-                return String(displayedItem.keyword)
+                return String(displayedItem.keyword.lowercased())
             } else {
                return String(displayedItem.keyword.dropFirst(1).dropLast(2))
             }
