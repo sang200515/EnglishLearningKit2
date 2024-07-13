@@ -12,6 +12,7 @@ import NaturalLanguage
 struct TypingModifiersView: View {
     @ObservedObject private var state = ModifierState()
     @FocusState private var isFocused: Bool
+    @State private var showGreeting = false
     
     var body: some View {
         VStack {
@@ -46,17 +47,22 @@ private extension TypingModifiersView {
     
     var contentView: some View {
         // if user use keyboard command + 1 it will be show / hide this vstack
-        VStack {
-            Text(state.displayedItem.keyword)
-                .font(.system(size: 50))
-                .bold()
-            Text(state.textForSpeech)
-            Text(state.displayedItem.ios)
-            Text(state.displayedItem.fullText)
-            Text(state.displayedItem.description)
+        VStack(spacing: 0) {
+            Toggle("Show welcome message", isOn: $showGreeting)
+                .keyboardShortcut("j", modifiers: [.command])
+            if showGreeting {
+                Text(state.displayedItem.keyword)
+                    .font(.system(size: 50))
+                    .bold()
+                Text(state.textForSpeech)
+                Text(state.displayedItem.ios)
+                Text(state.displayedItem.fullText)
+                Text(state.displayedItem.description)
+            }
         }
         .font(.system(size: 30))
     }
+    
     
     var searchTextField: some View {
         TextField("", text: $state.searchText)
@@ -84,7 +90,7 @@ private extension TypingModifiersView {
     }
     
     var popupView: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 20.0) {
             Text("This is a popup")
                 .font(.title)
                 .bold()
@@ -146,3 +152,5 @@ extension TypingModifiersView {
 #Preview {
     TypingModifiersView()
 }
+
+
